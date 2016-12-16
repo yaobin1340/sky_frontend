@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/assets/css/usercenter.css">
+<body class="user_center_body_all">
+<header class="am-topbar am-topbar-inverse am-topbar-fixed-top register_one_header">
+    <span class="register_header_title">个人中心</span>
+    <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+</header>
+<section>
+    <div class="header_center">
+        <img src="/assets/images/userimg.png">
+        <div class="header_photo">
+            <div class="header_photo_user">
+                <img src="/" id="image1">
+            </div>
+            <div class="user_center_user_id">
+                姚斌<span>(ID:1316)</span>
+                <div class="header_photo_user_name">联合服务商</div>
+            </div>
+        </div>
+    </div>
+    <table class="shop_index_section_table" border="0">
+        <tr>
+            <td class="td_border">
+                <span>100</span><br>
+                <span>葵花籽</span>
+            </td>
+            <td class="td_border">
+                <span>62</span><br>
+                <span>向日葵</span>
+            </td>
+            <td class="td_border">
+                <a href="#">
+                    <span>成为商家</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <div class="shop_index_section_content_all">
+        <a href="{{site_url url='user/information_revise'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-cogs user_center_list_name">&nbsp;账户管理</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a href="{{site_url url='user/withdraw'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-credit-card user_center_list_name">&nbsp;资金管理</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a href="{{site_url url='user/list_orders'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-cart-plus user_center_list_name">&nbsp;我的订单</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a href="{{site_url url='user/user_heart'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-sun-o user_center_list_name">&nbsp;我的向日葵</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a href="{{site_url url='user/my_income'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-line-chart user_center_list_name">&nbsp;我的收益</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a href="{{site_url url='user/my_team'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-users user_center_list_name">&nbsp;我的团队</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a href="{{site_url url='user/my_shop_order'}}">
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-cart-plus user_center_list_name">&nbsp;商城订单</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+    </div>
+    <a href="{{site_url url='frontend/logout'}}"><button class="shop_index_section_btn">退出登录</button></a>
+</section>
