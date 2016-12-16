@@ -2,6 +2,7 @@
 html{
     font-size: 62.5%;
     font-family: "Hiragino Sans GB W3";
+    position: relative;
 }
 body,h1,h2,h3,p,ul,ol,form,fieldset,figure{
     margin: 0;
@@ -18,16 +19,13 @@ ul,ol{
     boder-style:none;
 }
 .register_one_header{
-    width: 100%;text-align: center;background: #01a2f2;
+    width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;z-index: 222;
 }
 .register_header_title{
     text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';
 }
 .register_header_back{
     line-height: 50px;font-size: 20px;float: left;margin-left:5px ;
-}
-.register_one_header{
-    border-color: #01a2f2;
 }
 .header{
     position: relative;
@@ -39,7 +37,7 @@ ul,ol{
     background-color: #b2e2fa;
     font-family: "宋体";
     position: relative;
-    clear: both;
+
 }
 .header_center img{
     width: 100%;
