@@ -37,7 +37,7 @@ ul,ol{
     background-color: #b2e2fa;
     font-family: "宋体";
     position: relative;
-
+    margin-top: -19px;
 }
 .header_center img{
     width: 100%;
