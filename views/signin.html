@@ -7,14 +7,14 @@
     <div class="login_all_form">
         <div class="am-form-group am-form-icon login_form_mobile">
             <i class="am-icon-mobile-phone"></i>
-            <input style="border-radius: 10px;" type="number" id="doc-vld-mima-1"  name="mobile" class="am-form-field js-pattern-mobile" placeholder="请输入您的手机号" required />
+            <input style="border-radius: 10px;" type="number" id="doc-vld-mima-1"  ng-model="user.mobile" class="am-form-field js-pattern-mobile" placeholder="请输入您的手机号" required />
         </div>
         <div class="am-form-group am-form-icon login_form_password">
             <i class="am-icon-lock"></i>
-            <input style="border-radius: 10px;" type="password" id="doc-vld-mima-2"  name="password" class="am-form-field js-pattern-pwd" placeholder="请输入您的密码" required />
+            <input style="border-radius: 10px;" type="password" id="doc-vld-mima-2" ng-model="user.password" class="am-form-field js-pattern-pwd" placeholder="请输入您的密码" required />
         </div>
     </div>
-    <button style="border-radius: 10px;" class="am-btn am-btn-secondary am-btn-default am-btn-block login_form_btn">登陆</button>
+    <button style="border-radius: 10px;" class="am-btn am-btn-secondary am-btn-default am-btn-block login_form_btn" ng-click="signin()">登陆</button>
 <div class="login_others">
     <a ui-sref="forgot_pwd"><span class="login_others_forget_pwd">忘记密码？</span></a>
     <a ui-sref="signup"><span class="login_others_news_user">新用户注册</span></a>

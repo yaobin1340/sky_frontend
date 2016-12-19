@@ -1,64 +1,54 @@
 angular
-	.module( 'ohapp' )
-	.controller( 'SigninSignupCtrl', function SigninSignupCtrl( $scope, $injector, $rootScope) {
-		var $http = $injector.get( '$http' );
-		var $config = $injector.get( '$config' );
-		var $timeout = $injector.get( '$timeout' );
+	.module('ohapp')
+	.controller('SigninSignupCtrl', function SigninSignupCtrl($scope, $injector, $rootScope) {
+		var $http = $injector.get('$http');
+		var $config = $injector.get('$config');
+		var $timeout = $injector.get('$timeout');
 		var $session = $injector.get('$session');
 		var $window = $injector.get('$window')
 		var $location = $injector.get('$location');
+		var $mdDialog = $injector.get('$mdDialog');
+		var $mdMedia = $injector.get('$mdMedia');
+		var $mdToast = $injector.get('$mdToast');
 
 		$scope.page = $rootScope.$page
 
-		$scope.passwordSignin = function (e) {
-			if (undefined !== e && 13 !== e.which) return;
-			if(!$scope.signinForm['emailAddress'].$valid){
-				$scope.signinForm.emailAddress.$touched = true
-				return;
-			}
-
-			if(!$scope.signinForm['password'].$valid){
-				$scope.signinForm.password.$touched = true
-				return;
-			}
-
-			$scope.signin();
-		};
-
 		$scope.signin = function () {
-
-            $http({
-            	method: 'POST',
-                url: $config.api_uri + '/Apipublic/Apilogin/login_name_pw',
-                data: $scope.user,
-            }).success(function (data) {
-					$rootScope.$isLogin = true;
+			$http({
+				method: 'POST',
+				url: $config.api_uri + '/Apiftontend/check_login',
+				data: $scope.user,
+			}).success(function (data) {
+				if(data.success){
 					$session.set('auth', data)
 					$session.save()
-					$rootScope.firstName = data.firstName
-					$rootScope.lastName = data.lastName
-					$mdDialog.hide();
-				})
-				.error(function (data) {
-					$scope.apiError = data.error
-					$scope.user = {emailAddress: emailAddress}
-				})
+					$location.path('/user_center')
+				}else{
+					$mdToast.show(
+						$mdToast.simple()
+							.content(data.error_msg)
+							.position('top right')
+							.hideDelay(2000)
+					);
+				}
+
+			})
 		}
 
 		$scope.signup = function () {
-			if(!$scope.signupForm['firstName'].$valid){
+			if (!$scope.signupForm['firstName'].$valid) {
 				$scope.signupForm.firstName.$touched = true
 				return;
 			}
-			if(!$scope.signupForm['lastName'].$valid){
+			if (!$scope.signupForm['lastName'].$valid) {
 				$scope.signupForm.lastName.$touched = true
 				return;
 			}
-			if(!$scope.signupForm['emailAddress'].$valid){
+			if (!$scope.signupForm['emailAddress'].$valid) {
 				$scope.signupForm.emailAddress.$touched = true
 				return;
 			}
-			if(!$scope.signupForm['password'].$valid){
+			if (!$scope.signupForm['password'].$valid) {
 				$scope.signupForm.password.$touched = true
 				return;
 			}
@@ -78,40 +68,40 @@ angular
 				})
 		}
 
-		$scope.showSignin = function(ev) {
-			var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+		$scope.showSignin = function (ev) {
+			var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
 			$mdDialog.show({
 				controller: 'SigninSignupCtrl',
 				templateUrl: 'views/modals/signin-signup.html',
 				parent: angular.element(document.body),
 				targetEvent: ev,
-				clickOutsideToClose:true,
+				clickOutsideToClose: true,
 				fullscreen: useFullScreen
 			});
 			$rootScope.$page = 'signIn'
 		}
 
-		$scope.showSignup = function(ev) {
-			var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+		$scope.showSignup = function (ev) {
+			var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
 			$mdDialog.show({
 				controller: 'SigninSignupCtrl',
 				templateUrl: 'views/modals/signin-signup.html',
 				parent: angular.element(document.body),
 				targetEvent: ev,
-				clickOutsideToClose:true,
+				clickOutsideToClose: true,
 				fullscreen: useFullScreen
 			});
 			$rootScope.$page = 'signUp'
 		}
 
-		$scope.forgotPassword = function(ev) {
-			var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+		$scope.forgotPassword = function (ev) {
+			var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
 			$mdDialog.show({
 				controller: 'SigninSignupCtrl',
 				templateUrl: 'views/modals/signin-signup.html',
 				parent: angular.element(document.body),
 				targetEvent: ev,
-				clickOutsideToClose:true,
+				clickOutsideToClose: true,
 				fullscreen: useFullScreen
 			});
 			$rootScope.$page = 'forgotPassword'

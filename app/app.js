@@ -6,6 +6,10 @@ angular.module( 'ohapp',
         'ui.bootstrap',
         'ohRoutes',
         'ohConfig',
+        'ngAnimate',
+        'ngMaterial',
+        'ngMdIcons',
+        'ngAria',
     ]
 )
 .config( function config( $injector, $locationProvider)
@@ -15,6 +19,25 @@ angular.module( 'ohapp',
     var $routesProvider = $injector.get( '$routesProvider' );
     var $httpProvider = $injector.get( '$httpProvider' );
     var $config = $injector.get('$configProvider').$get();
+    var $mdThemingProvider = $injector.get('$mdThemingProvider');
+
+    $mdThemingProvider.theme('default')
+        .primaryPalette('green', {
+            'default': '400',
+            'hue-1': '200'
+        })
+        .accentPalette('light-green', {
+            'default': '400',
+            'hue-1': '300',
+            'hue-2': '200',
+            'hue-3': '500'
+        })
+        .warnPalette('lime', {
+            'default': '400',
+            'hue-1': '300',
+            'hue-2': '200',
+            'hue-3': '500'
+        });
 
 
     $urlRouterProvider.otherwise( '/home' );
