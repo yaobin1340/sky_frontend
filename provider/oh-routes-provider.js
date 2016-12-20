@@ -27,6 +27,14 @@ angular
         controller: 'UserCenterCtrl'
     };
 
+    this.routes[ 'main.shop_detail' ] =
+    {
+        url: '^/shop_detail',
+        title: 'shop_detail',
+        templateUrl: 'views/shop_detail.html',
+        controller: 'ShopDetailCtrl'
+    };
+
     this.routes['signin'] = {
         url : '/signin',
         templateUrl : 'views/signin.html',
