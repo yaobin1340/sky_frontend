@@ -27,7 +27,31 @@ angular
 					$mdToast.show(
 						$mdToast.simple()
 							.content(data.error_msg)
-							.position('top right')
+							.hideDelay(2000)
+					);
+				}
+
+			})
+		}
+
+		$scope.get_yzm = function(){
+			$http({
+				method: 'POST',
+				url: $config.api_uri + '/Apiftontend/get_yzm_forget',
+				data: {mobile:$scope.mobile},
+			}).success(function (data) {
+				if(data.success){
+					$session.set('yzm', data.yzm)
+					$session.save()
+					$mdToast.show(
+						$mdToast.simple()
+							.content('短信发送成功')
+							.hideDelay(2000)
+					);
+				}else{
+					$mdToast.show(
+						$mdToast.simple()
+							.content(data.error_msg)
 							.hideDelay(2000)
 					);
 				}
