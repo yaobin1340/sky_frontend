@@ -29,10 +29,17 @@ angular
 
     this.routes[ 'main.shop_detail' ] =
     {
-        url: '^/shop_detail',
+        url: '^/shop_detail?shop_id',
         title: 'shop_detail',
         templateUrl: 'views/shop_detail.html',
         controller: 'ShopDetailCtrl'
+    };
+    this.routes[ 'main.list_orders' ] =
+    {
+        url: '^/list_orders',
+        title: 'list_orders',
+        templateUrl: 'views/list_orders.html',
+        controller: 'ListOrdersCtrl'
     };
 
     this.routes['signin'] = {
