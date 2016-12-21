@@ -35,11 +35,15 @@ angular
 		var slides = $scope.slides = [];
 
 		slides.push({
-			image: '/assets/images/shop.jpg',
+			image: '/assets/images/banner.jpg',
 			id: currIndex++
 		});
 		slides.push({
-			image: '/assets/images/shop.jpg',
+			image: '/assets/images/banner1.jpg',
+			id: currIndex++
+		});
+		slides.push({
+			image: '/assets/images/banner1.jpg',
 			id: currIndex++
 		});
 

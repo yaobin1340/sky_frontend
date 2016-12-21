@@ -78,12 +78,16 @@
 			</div>
 			<button type="submit" class="am-btn am-btn-secondary am-btn-default am-btn-block am-btn-next" ng-disabled="signUpForm.$invalid">下一步</button>
 			<div class="am-form-group sky_register_xieyi">
-				<label class="am-checkbox-inline">
-					<input class="sky_register_xieyi_input" type="checkbox" name="agree" required>
+				<!--<label class="am-checkbox-inline">-->
+					<input type="checkbox" name="agree"
+						   ng-model="agree"
+						   ng-class="{'error':signUpForm.agree.$invalid}"
+						   required
+						   class="sky_register_xieyi_input"/>
                     <span class="sky_register_xieyi_agree" data-am-modal="{target: '#my-popup'}">同意
                          <span  class="checkbox_agreement">《三客柚用户注册协议》</span>
                      </span>
-				</label>
+				<!--</label>-->
 				<span class="checkbox_zhanghaoed">有账号？<a ui-sref="signin"><span class="span2">登陆</span></a></span>
 			</div>
 			<div class="am-popup" id="my-popup">

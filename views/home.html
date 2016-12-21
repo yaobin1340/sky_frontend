@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/assets/css/index.css">
-<div class="shop_index_header" style="width: 100%;background: #01a2f2;color: #ffffff">
+<div class="shop_index_header">
 	<div class="shop_index_header_all">
 		<form class="am-topbar-form am-topbar-left am-form-inline" role="search">
 			<div class="am-form-group">
@@ -65,19 +65,17 @@
 	</div>
 </div>
 <div class="contener">
-	<div class="index_lunbo_img">
-		<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-			<ul class="am-slides">
-				<li><img src="/assets/images/banner.jpg" /></li>
-				<li><img src="/assets/images/banner1.jpg" /></li>
-				<li><img src="/assets/images/banner2.jpg" /></li>
-			</ul>
-		</div>
+	<div>
+		<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+			<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+				<img ng-src="{{slide.image}}" style="width:100%;margin:auto;">
+			</div>
+	</div>
 	</div>
 	<div class="line_02"><span>附近店铺</span></div>
 	<div class="index_main_content">
 		<table class="shop_index_main_content" infinite-scroll='shops.nextPage()' infinite-scroll-disabled='shop.busy' infinite-scroll-distance='1' >
-			<tr ng-repeat="item in shops.items" ui-sref="main.shop_detail">
+			<tr ng-repeat="item in shops.items" ui-sref="main.shop_detail({shop_id:item.id})">
 				<td class="shop_index_main_content_img">
 					<!--<img class="img1" src="{{api_uri}}/upload/logo/{{item.logo}}">-->
 					<!--<img class="img2" src="/assets/images/home_icon_{{item.percent}}series.png"/>-->
