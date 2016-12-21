@@ -76,11 +76,11 @@
 	</div>
 	<div class="line_02"><span>附近店铺</span></div>
 	<div class="index_main_content">
-		<table class="shop_index_main_content" border="0">
-			<tr ng-repeat="item in shop_list" ui-sref="main.shop_detail">
+		<table class="shop_index_main_content" infinite-scroll='shops.nextPage()' infinite-scroll-disabled='shop.busy' infinite-scroll-distance='1' >
+			<tr ng-repeat="item in shops.items" ui-sref="main.shop_detail">
 				<td class="shop_index_main_content_img">
-					<img class="img1" src="{{api_uri}}/upload/logo/{{item.logo}}">
-					<img class="img2" src="/assets/images/home_icon_{{item.percent}}series.png"/>
+					<!--<img class="img1" src="{{api_uri}}/upload/logo/{{item.logo}}">-->
+					<!--<img class="img2" src="/assets/images/home_icon_{{item.percent}}series.png"/>-->
 				</td>
 				<td class="shop_index_main_content_td">
 					<div class="index_shop_info">
@@ -94,5 +94,6 @@
 			</tr>
 
 		</table>
+		<div ng-show='shops.end'>-暂无更多店铺-</div>
 	</div>
 </section>
