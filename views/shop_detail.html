@@ -4,8 +4,12 @@
         <span class="register_header_title">我的订单</span>
         <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
     </div>
-    <div class="shop_detail_img_slide">
-       图片轮播
+    <div style="height: 305px">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+            </div>
+        </div>
     </div>
 
      <div>

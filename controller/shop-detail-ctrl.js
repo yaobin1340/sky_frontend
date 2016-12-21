@@ -12,7 +12,7 @@ angular
 		var $mdToast = $injector.get('$mdToast');
 
 		$scope.api_uri = $config.api_uri;
-		console.log($stateParams.shop_id)
+		var currIndex = 0;
 
 		$http({
 			method: 'POST',
@@ -30,5 +30,17 @@ angular
 			}
 
 		})
+
+		$scope.myInterval = 5000;
+		var slides = $scope.slides = [];
+
+		slides.push({
+			image: '/assets/images/shop.jpg',
+			id: currIndex++
+		});
+		slides.push({
+			image: '/assets/images/shop.jpg',
+			id: currIndex++
+		});
 
 	});
