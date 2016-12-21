@@ -1,10 +1,5 @@
 <link rel="stylesheet" href="/assets/css/index.css">
-<style>
-	header{
-		width: 100%;
-	}
-</style>
-<header class="am-topbar am-topbar-inverse shop_index_header">
+<div class="shop_index_header" style="width: 100%;background: #01a2f2;color: #ffffff">
 	<div class="shop_index_header_all">
 		<form class="am-topbar-form am-topbar-left am-form-inline" role="search">
 			<div class="am-form-group">
@@ -68,8 +63,8 @@
 			</div>
 		</div>
 	</div>
-</header>
-<section>
+</div>
+<div class="contener">
 	<div class="index_lunbo_img">
 		<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
 			<ul class="am-slides">
@@ -82,7 +77,7 @@
 	<div class="line_02"><span>附近店铺</span></div>
 	<div class="index_main_content">
 		<table class="shop_index_main_content" infinite-scroll='shops.nextPage()' infinite-scroll-disabled='shop.busy' infinite-scroll-distance='1' >
-			<tr ng-repeat="item in shops.items" ui-sref="main.shop_detail({shop_id:item.id})">
+			<tr ng-repeat="item in shops.items" ui-sref="main.shop_detail">
 				<td class="shop_index_main_content_img">
 					<!--<img class="img1" src="{{api_uri}}/upload/logo/{{item.logo}}">-->
 					<!--<img class="img2" src="/assets/images/home_icon_{{item.percent}}series.png"/>-->
@@ -99,6 +94,6 @@
 			</tr>
 
 		</table>
-		<div ng-show='shops.end'>-暂无更多店铺-</div>
+		<div class="home_shop_nomore" ng-show='shops.end'>-暂无更多店铺-</div>
 	</div>
-</section>
+</div>
