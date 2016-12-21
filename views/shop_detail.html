@@ -1,19 +1,14 @@
 <link rel="stylesheet" href="/assets/css/shopdetail.css">
 <div class="body_all">
-    <header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
-        <div class="register_one_header">
-            <span class="register_header_title">商家详情</span>
-             <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
-        </div>
-    </header>
-    <section style="margin-top:50px;">
-        <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-            <ul class="am-slides lunbo_img">
-                <li><img src="/statics/images/banner.jpg"/></li>
-                <li><img src="/statics/images/banner1.jpg"/></li>
-                <li><img src="/statics/images/banner2.jpg" /></li>
-            </ul>
-        </div>
+    <div class="register_one_header">
+        <span class="register_header_title">我的订单</span>
+        <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+    </div>
+    <div class="shop_detail_img_slide">
+       图片轮播
+    </div>
+
+     <div>
         <div class="product_detail_1">
             <h7 class="product_detail_1_title">{{shop_detail.shop_name}}</h7>
             <div class="am-list-item-text product_detail_4">
@@ -68,5 +63,5 @@
             <img src="/assets/images/shop.jpg" style="width: 22%;">
             <img src="/assets/images/shop.jpg" style="width: 22%;">
         </div>
-    </section>
+     </div>
 </div>

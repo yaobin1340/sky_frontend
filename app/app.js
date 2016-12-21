@@ -10,6 +10,8 @@ angular.module( 'ohapp',
         'ngMaterial',
         'ngMdIcons',
         'ngAria',
+        'infinite-scroll'
+
     ]
 )
 .config( function config( $injector, $locationProvider)

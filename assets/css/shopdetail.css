@@ -11,28 +11,25 @@ ul,ol{
     list-style: none;
 }
 .body_all{
-    padding-bottom: 80px;
+    padding-bottom: 80px;width: 100%;
 }
 .am-topbar{
     boder-style:none;
 }
 .register_one_header{
-    width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;z-index: 222;
+    width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;z-index: 222;color: #ffffff;
 }
 .register_header_title{
     text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';
 }
 .register_header_back{
-    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;
+    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;color: #ffffff;
 }
-.am-slider-default .am-direction-nav a {
-    /*display: none;*/
-}
-.am-slider-default .am-control-nav{
-    bottom: 10px;
+.shop_detail_img_slide{
+    margin-top: 50px;background: red;height: 50px;
 }
 .product_detail_1{
-    width: 100%;border-bottom: 1px solid #e3e3e3;padding-bottom: 10px; margin-top: -15px;position: relative;
+    width: 100%;border-bottom: 1px solid #e3e3e3;padding-bottom: 10px;position: relative;
 }
 .product_detail_1 .product_detail_1_title{
     margin-left: 15px;font-size: 20px;
@@ -88,14 +85,11 @@ ul,ol{
 .product_detail_7{
     width: 100%;height: 15px;background: #ecf1eb;
 }
-.product_detail_id{
-    margin-left:15px;font-size: 18px;padding-top: 10px;
-}
 .product_detail_time{
-    margin-left: 15px;margin-top: -5px;
+    margin-left: 15px;margin-top: 5px;
 }
 .product_detail_describe{
-    width: 90%;margin: 0 auto;margin-top: 5px;
+    width: 90%;margin: 0 auto;margin-top: 10px;
 }
 .footer{
     width: 100%;height: 60px; position:fixed; bottom:0;background-color: #ffffff;z-index: 555;border-top:1px solid #e9e9e9;color: #696969;

@@ -12,20 +12,23 @@ ul,ol{
     list-style: none;
 }
 .user_center_body_all{
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     background: #ecf1eb;
+}
+.body_all{
+    padding-bottom: 80px;width: 100%;
 }
 .am-topbar{
     boder-style:none;
 }
 .register_one_header{
-    width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;z-index: 222;
+    width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;z-index: 222;color: #ffffff;
 }
 .register_header_title{
     text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';
 }
 .register_header_back{
-    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;
+    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;color: #ffffff;
 }
 .header{
     position: relative;
@@ -37,7 +40,7 @@ ul,ol{
     background-color: #b2e2fa;
     font-family: "宋体";
     position: relative;
-    margin-top: -19px;
+    margin-top: 50px;
 }
 .header_center img{
     width: 100%;
@@ -85,7 +88,7 @@ ul,ol{
     color: #0aa0ef;
 }
 .shop_index_section_content_all{
-    background: #ffffff;margin-top: 10px;
+    background: #ffffff;margin-top: 10px;width: 100%;
 }
 .shop_index_section_content_all .shop_index_section_content_list{
     padding: 15px;border-bottom: 1px solid #e3e3e3;
