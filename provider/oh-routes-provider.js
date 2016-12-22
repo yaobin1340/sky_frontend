@@ -55,6 +55,13 @@ angular
         templateUrl: 'views/show_information.html',
         controller: 'ShowInformationCtrl'
     };
+    this.routes[ 'main.withdraw' ] =
+    {
+        url: '^/withdraw',
+        title: 'withdraw',
+        templateUrl: 'views/withdraw.html',
+        controller: 'WithdrawCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
