@@ -41,6 +41,13 @@ angular
         templateUrl: 'views/list_orders.html',
         controller: 'ListOrdersCtrl'
     };
+    this.routes[ 'main.mall_index' ] =
+    {
+        url: '^/mall_index',
+        title: 'mall_index',
+        templateUrl: 'views/mall_index.html',
+        controller: 'MallIndexCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
