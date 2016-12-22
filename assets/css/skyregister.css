@@ -46,10 +46,10 @@
     height: 50px;width: 100%;text-align: center;background: #01a2f2;
 }
 .register_header_title{
-    text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';
+    text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';color: #ffffff;
 }
 .register_header_back{
-    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;
+    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;color: #ffffff;
 }
 .am-slider-default .am-direction-nav a {
     /*display: none;*/

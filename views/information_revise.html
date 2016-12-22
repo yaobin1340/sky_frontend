@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="/assets/css/merchantssettled.css">
+<link rel="stylesheet" href="/assets/css/informationrevise.css">
+<style>
+    .body_all{
+        margin-top: 50px;padding-bottom: 30px;
+    }
+</style>
+<div class="register_one_header">
+    <span class="register_header_title">账户管理</span>
+    <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+</div>
+<div class="am-g body_all">
+        <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+            <form id="save_form" class="am-form-inline am-form" method="post" action="" data-am-validator>
+                <!--<input type="hidden" id="bd_lat" name="baidu_lat" value="{{if $shop}}{{$shop.baidu_lat}}{{/if}}">-->
+                <!--<input type="hidden" id="bd_lng"  name="baidu_lng" value="{{if $shop}}{{$shop.baidu_lng}}{{/if}}">-->
+                <div class="am-form-group am-form-file upload_img_all">
+                    <input id="file" type="file" accept="image/*" capture=camera"/>
+                    <div class="upload_img_div1">
+                        <div class="upload_img_div2">
+                            <img src="" id="previewResult">
+                        </div>
+                        <button id="btn_file" type="button" class="am-btn am-btn-danger am-btn-sm upload_img_btn">
+                            <i class="am-icon-cloud-upload"></i> 修改头像
+                        </button>
+                        <input type="hidden" name="img_input" id="img_input">
+                    </div>
+                </div>
+                <div class="user_informatio">
+                    <div class="information_name">您的姓名：<span>zhou</span></div>
+                    <div class="information_tel">您的号码：<span>15850293624</span></div>
+                </div>
+                <div class="am-form-group">
+                    <select id="province_code" name="province_code" onchange="changeSelect(this)">
+                        <option value="">-请选择省份-</option>
+                        <option value="" >--江苏省--</option>
+                        <option value="" >--安徽省--</option>
+                    </select>
+                    <select id="city_code" name="city_code" onchange="changeSelectCity(this)">
+                        <option value="">-请选择城市-</option>
+                        <option value="" >-宿迁市-</option>
+                        <option value="" >-苏州市-</option>
+                    </select>
+                    <select id="area_code" name="area_code">
+                        <option value="">-请选择区域-</option>
+                        <option value="">-太仓市-</option>
+                        <option value="">-昆山市-</option>
+                    </select>
+                </div>
+                <div class="merchants_settled_shop_information_btn">
+                    <button type="button" class="am-btn am-btn-default am-btn-block login_form_btn" data-am-modal="{target: '#my-popup'}">修改密码</button>
+                </div>
+                <div class="information_revise_btn_confirm">
+                    <input id="save_btn" class="am-btn am-btn-secondary am-btn-block information_revise_btn_confirm_back" type="button" value="确认">
+                </div>
+                <div class="information_revise_btn_confirm">
+                    <a class="am-btn am-btn-default am-btn-block information_revise_btn_confirm_back" href="">返回</a>
+                </div>
+            </form>
+            <div class="am-popup" id="my-popup">
+                <div class="am-popup-inner">
+                    <div class="am-popup-hd">
+                        <h4 class="am-popup-title">修改密码</h4>
+                        <span data-am-modal-close class="am-close" style="color: #3bb4f2;">&times;</span>
+                    </div>
+                    <div class="am-popup-bd information_revise_layer">
+                        <div class="am-g">
+                            <br class="am-u-lg-6 am-u-md-8 am-u-sm-centered"><br><br><br>
+                            <form id="edit_pwd_form" method="post" class="am-form " action="" data-am-validator>
+                                <div class="am-form-group am-form-icon">
+                                    <i class="am-icon-lock"></i>
+                                    <input type="password" id="pwd_pass"  name="password" class="am-form-field am-form-mobile" placeholder="请输入您的旧密码" required />
+                                </div>
+                                <div class="am-form-group am-form-icon">
+                                    <i class="am-icon-lock"></i>
+                                    <input type="password" id="pwd_new_one"  name="new_password" class="am-form-field am-form-mobile" placeholder="请输入新密码" required />
+                                </div>
+                                <div class="am-form-group am-form-icon">
+                                    <i class="am-icon-lock"></i>
+                                    <input type="password" id="pwd_new_two"  name="new_password2" class="am-form-field am-form-mobile" placeholder="请确认新密码" required />
+                                </div>
+                                <button id="edit_pwd_btn" type="button" class="am-btn am-btn-secondary am-btn-default am-btn-block am-btn-next">修改</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--<script>-->
+    <!--$('#previewResult')-->
+            <!--.load(function(){-->
+            <!--})-->
+            <!--.error(function(){-->
+                <!--$('#previewResult').attr('src',"/images/registered_avatar@2x.png")-->
+            <!--});-->
+<!--</script>-->

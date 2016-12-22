@@ -131,4 +131,44 @@ angular
 			$rootScope.$page = 'forgotPassword'
 		}
 
+		$scope.submitForm = function () {
+			console.log('表单提交');
+		}
+
+		window.wait = 90
+		$scope.get_yzm = function(obj){
+			if(!$("#doc-vld-phone-2").val()){
+				alert('请输入手机号5码');
+				return false;
+			}
+//        {{literal}}
+			if(!(/^1[34578]\d{9}$/.test($("#doc-vld-phone-2").val()))){
+				alert("手机号码有误，请重填");
+				return false;
+			}
+//        {{/literal}}
+			$.getJSON("{{site_url url='/frontend/get_yzm'}}/"+$("[name='mobile']").val(),function(data){
+				if(data.error != 0){
+					alert(data.msg);
+					return false;
+				}
+				time($("#get_yzm").find('input'))
+			});
+		}
+		$scope.time = function(o) {
+			if (window.wait == 0) {
+				o.attr('disabled',false);
+				o.val('获取验证码');
+				window.wait = 90;
+			} else {
+				o.attr('disabled',true);
+				o.val("重新发送"+(window.wait))
+				window.wait--;
+				setTimeout(function() {
+						time(o)
+					},
+					1000)
+			}
+		}
+
 	});

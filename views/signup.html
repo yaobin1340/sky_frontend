@@ -1,15 +1,10 @@
 <link rel="stylesheet" href="/assets/css/skyregister.css">
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 <style>
-	html{
-		overflow-y: hidden;
-	}
  	#check{
 		line-height: 1;
 		z-index: 2;
 		margin-top: 1em;
 		margin-right: .5em;
-
 	}
 	.form-control {
 		height: 50px;
@@ -23,12 +18,14 @@
 		width: 60%; height: 50px; position:absolute;left:12px;right:100px;border-radius: 10px;
 	}
 </style>
-<body ng-app="myApp" ng-controller="MainController">
-<div class="am-g">
-	<header class="am-topbar am-topbar-inverse am-topbar-fixed-top register_one_header">
-		<span class="register_header_title">会员注册</span>
+	<!--<header class="am-topbar am-topbar-inverse am-topbar-fixed-top register_one_header">-->
+		<!--<span class="register_header_title">会员注册</span>-->
+		<!--<a ui-sref="signin"><span class="am-icon-chevron-left register_header_back"></span></a>-->
+	<!--</header>-->
+	<div class="register_one_header">
+		<span class="register_header_title">个人中心</span>
 		<a ui-sref="signin"><span class="am-icon-chevron-left register_header_back"></span></a>
-	</header>
+	</div>
 	<div style="margin-top: 40px;">
 	<img class="sky_register_logo" src="/assets/images/orderdetails_logo_icon.png"><br>
 	<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered"><br>
@@ -72,7 +69,7 @@
 						   class="am-form-field sky_register_yzm"
 						   placeholder="请输入验证码"/>
 				</div>
-				<a href="javascript:;" onclick="get_yzm(this)" id="get_yzm">
+				<a href="javascript:;" ng-click="get_yzm(this)" id="get_yzm">
 					<input class="am-btn-secondary get_btn_yzm" type="button" value="获取验证码" >
 				</a>
 			</div>
@@ -267,49 +264,3 @@
 	</div>
 </div>
 </div>
-</body>
-<script>
-	angular.module('myApp',[])
-			.controller('MainController',function ($scope) {
-				$scope.submitForm = function () {
-					console.log('表单提交');
-				}
-			})
-</script>
-<script>
-	window.wait = 90
-	function get_yzm(obj){
-		if(!$("#doc-vld-phone-2").val()){
-			alert('请输入手机号码');
-			return false;
-		}
-//        {{literal}}
-		if(!(/^1[34578]\d{9}$/.test($("#doc-vld-phone-2").val()))){
-			alert("手机号码有误，请重填");
-			return false;
-		}
-//        {{/literal}}
-		$.getJSON("{{site_url url='/frontend/get_yzm'}}/"+$("[name='mobile']").val(),function(data){
-			if(data.error != 0){
-				alert(data.msg);
-				return false;
-			}
-			time($("#get_yzm").find('input'))
-		});
-	}
-	function time(o) {
-		if (window.wait == 0) {
-			o.attr('disabled',false);
-			o.val('获取验证码');
-			window.wait = 90;
-		} else {
-			o.attr('disabled',true);
-			o.val("重新发送"+(window.wait))
-			window.wait--;
-			setTimeout(function() {
-						time(o)
-					},
-					1000)
-		}
-	}
-</script>

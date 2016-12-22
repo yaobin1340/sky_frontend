@@ -48,6 +48,13 @@ angular
         templateUrl: 'views/mall_index.html',
         controller: 'MallIndexCtrl'
     };
+    this.routes[ 'main.show_information' ] =
+    {
+        url: '^/show_information',
+        title: 'show_information',
+        templateUrl: 'views/show_information.html',
+        controller: 'ShowInformationCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
@@ -65,6 +72,11 @@ angular
         url : '/forgot_pwd',
         templateUrl : 'views/forgot_pwd.html',
         controller : 'SigninSignupCtrl'
+    };
+    this.routes['information_revise'] = {
+        url : '/information_revise',
+        templateUrl : 'views/information_revise.html',
+        controller : 'InformationReviseCtrl'
     };
 
     this.$get = function()
