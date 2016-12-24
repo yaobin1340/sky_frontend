@@ -1,4 +1,32 @@
 <link rel="stylesheet" href="/assets/css/listorders.css">
+<style>
+   .panel-default>.panel-heading{
+        background: none;
+        border-style: none;
+       /*display: none;*/
+    }
+    #accordiongroup-11-6916-tab{
+       border-style: none;
+      }
+    span.ng-binding{
+        /*float: right;*/
+        border-style: none;
+    }
+   .panel-heading{
+       border-style: none;
+       padding-left: 0;
+   }
+   .panel-default>.panel-heading{
+       border-style: none;
+       border-color: #ffffff;
+   }
+    .panel-title{
+        font-size: 16px;color: #179fed;
+    }
+   .am-icon-list-ul{
+       font-size: 18px;
+   }
+</style>
 <div class="body_all">
   <div class="register_one_header">
        <span class="register_header_title">我的订单</span>
@@ -23,17 +51,40 @@
         <div class="sky_list_orders_content_four_pending">审核中</div>
     </div>
     <div class="sky_list_orders_content_five">
-        <p>
+        <p style="padding-bottom: 10px;">
             <span>店铺评价</span>
             <i><img src="../../assets/images/productdetails_star_icon.png"></i>
             <i><img src="../../assets/images/productdetails_star_icon.png"></i>
             <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
             <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
             <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-            <a data-am-collapse="{parent: '#collapase-nav-1', target: '#user-nav'}">
-                <span class="sky_list_orders_content_assess">我要评价&nbsp;<span class="am-icon-sort-desc"></span></span>
-            </a>
         </p>
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" heading="我要评价" is-open="" is-disabled="status.isFirstDisabled">
+                <div>
+                <div class="sky_list_orders_content_six_username">我的用户名</div>
+                <div>
+                <p>
+                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
+                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
+                </p>
+                </div>
+                <div class="sky_list_orders_content_six_userassess">
+                <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
+                </div>
+                <div class="sky_list_orders_content_six_userimg">
+                <img src="../../assets/images/shop.jpg">
+                <img src="../../assets/images/shop.jpg">
+                <img src="../../assets/images/shop.jpg">
+                <img src="../../assets/images/shop.jpg">
+                </div></div>
+                </div>
+        </uib-accordion>
+
     </div>
 </div>
  <div>
@@ -51,17 +102,40 @@
             <div class="sky_list_orders_content_four_pending">审核中</div>
         </div>
         <div class="sky_list_orders_content_five">
-            <p>
+            <p style="padding-bottom: 10px;">
                 <span>店铺评价</span>
                 <i><img src="../../assets/images/productdetails_star_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_star_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                <a data-am-collapse="{parent: '#collapase-nav-1', target: '#user-nav'}">
-                    <span class="sky_list_orders_content_assess">我要评价&nbsp;<span class="am-icon-sort-desc"></span></span>
-                </a>
             </p>
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" heading="我要评价" is-open="" is-disabled="status.isFirstDisabled">
+                    <div>
+                        <div class="sky_list_orders_content_six_username">我的用户名</div>
+                        <div>
+                            <p>
+                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                                <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
+                            </p>
+                        </div>
+                        <div class="sky_list_orders_content_six_userassess">
+                            <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
+                        </div>
+                        <div class="sky_list_orders_content_six_userimg">
+                            <img src="../../assets/images/shop.jpg">
+                            <img src="../../assets/images/shop.jpg">
+                            <img src="../../assets/images/shop.jpg">
+                            <img src="../../assets/images/shop.jpg">
+                        </div></div>
+                </div>
+            </uib-accordion>
+
         </div>
     </div>
  <div>
@@ -79,39 +153,40 @@
             <div class="sky_list_orders_content_four_pending">审核中</div>
         </div>
         <div class="sky_list_orders_content_five">
-            <p>
+            <p style="padding-bottom: 10px;">
                 <span>店铺评价</span>
                 <i><img src="../../assets/images/productdetails_star_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_star_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
                 <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                <a data-am-collapse="{parent: '#collapase-nav-1', target: '#user-nav'}">
-                    <span class="sky_list_orders_content_assess">我要评价&nbsp;<span class="am-icon-sort-desc"></span></span>
-                </a>
             </p>
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" heading="我要评价" is-open="" is-disabled="status.isFirstDisabled">
+                    <div>
+                        <div class="sky_list_orders_content_six_username">我的用户名</div>
+                        <div>
+                            <p>
+                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                                <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
+                            </p>
+                        </div>
+                        <div class="sky_list_orders_content_six_userassess">
+                            <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
+                        </div>
+                        <div class="sky_list_orders_content_six_userimg">
+                            <img src="../../assets/images/shop.jpg">
+                            <img src="../../assets/images/shop.jpg">
+                            <img src="../../assets/images/shop.jpg">
+                            <img src="../../assets/images/shop.jpg">
+                        </div></div>
+                </div>
+            </uib-accordion>
+
         </div>
     </div>
-     <!--<div class="am-collapse admin-sidebar-sub sky_list_orders_content_six" id="user-nav">-->
-        <!--<div class="sky_list_orders_content_six_username">我的用户名</div>-->
-        <!--<div>-->
-           <!--<p>-->
-              <!--<i><img src="../../assets/images/productdetails_star_icon.png"></i>-->
-              <!--<i><img src="../../assets/images/productdetails_star_icon.png"></i>-->
-              <!--<i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>-->
-              <!--<i><img src="../../assets/images/productdetails_graystar_icon.png"></i>-->
-              <!--<i><img src="../../assets/images/productdetails_graystar_icon.png"></i>-->
-              <!--<span class="sky_list_orders_content_six_usertime">2016-10-21</span>-->
-           <!--</p>-->
-        <!--</div>-->
-            <!--&lt;!&ndash;<div class="sky_list_orders_content_six_userassess">&ndash;&gt;-->
-                <!--&lt;!&ndash;<p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="sky_list_orders_content_six_userimg">&ndash;&gt;-->
-                <!--&lt;!&ndash;<img src="../../assets/images/shop.jpg">&ndash;&gt;-->
-                <!--&lt;!&ndash;<img src="../../assets/images/shop.jpg">&ndash;&gt;-->
-                <!--&lt;!&ndash;<img src="../../assets/images/shop.jpg">&ndash;&gt;-->
-                <!--&lt;!&ndash;<img src="../../assets/images/shop.jpg">&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
 </div>
