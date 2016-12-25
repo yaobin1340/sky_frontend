@@ -76,6 +76,13 @@ angular
         templateUrl: 'views/money_log_list.html',
         controller: 'MoneyLogListCtrl'
     };
+    this.routes[ 'main.myincome' ] =
+    {
+        url: '^/myincome',
+        title: 'myincome',
+        templateUrl: 'views/myincome.html',
+        controller: 'MyIncomeCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
