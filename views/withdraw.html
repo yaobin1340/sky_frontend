@@ -6,9 +6,9 @@
 <div style="width: 100%;padding-bottom: 80px;margin-top: 50px;">
     <table class="table1" border="0">
         <tr>
-            <td class="td1"><a href="" onclick="money_record()" id="money_record">资金日志</a></td>
-            <td class="td1"><a href="" onclick="cash_record()" id="cash_record">提现日志</a></td>
-            <td class="td1"><a href="" onclick="application_record()" id="application_record">申请提现</a></td>
+            <td class="td1"><a ui-sref="main.withdraw_list" id="money_record">资金日志</a></td>
+            <td class="td1"><a ui-sref="main.money_log_list" id="cash_record">提现日志</a></td>
+            <td class="td1"><a ui-sref="main.withdraw" id="application_record">申请提现</a></td>
         </tr>
     </table>
     <div class="am-g row-one">
@@ -81,6 +81,5 @@
     <div class="merchants_settled_shop_information_btn">
         <!--<button type="button" class="am-btn am-btn-default am-btn-block login_form_btn">您的余额不足</button>-->
         <button type="button" class="am-btn am-btn-secondary am-btn-block login_form_btn">确认申请</button>
-
     </div>
 </div>

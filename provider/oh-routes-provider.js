@@ -62,6 +62,20 @@ angular
         templateUrl: 'views/withdraw.html',
         controller: 'WithdrawCtrl'
     };
+    this.routes[ 'main.withdraw_list' ] =
+    {
+        url: '^/withdraw_list',
+        title: 'withdraw_list',
+        templateUrl: 'views/withdraw_list.html',
+        controller: 'WithdrawListCtrl'
+    };
+    this.routes[ 'main.money_log_list' ] =
+    {
+        url: '^/money_log_list',
+        title: 'money_log_list',
+        templateUrl: 'views/money_log_list.html',
+        controller: 'MoneyLogListCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
