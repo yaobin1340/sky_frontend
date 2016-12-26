@@ -83,6 +83,41 @@ angular
         templateUrl: 'views/myincome.html',
         controller: 'MyIncomeCtrl'
     };
+    this.routes[ 'main.user_heart' ] =
+    {
+        url: '^/user_heart',
+        title: 'user_heart',
+        templateUrl: 'views/user_heart.html',
+        controller: 'UserHeartCtrl'
+    };
+    this.routes[ 'main.shop_heart' ] =
+    {
+        url: '^/shop_heart',
+        title: 'shop_heart',
+        templateUrl: 'views/shop_heart.html',
+        controller: 'UserHeartCtrl'
+    };
+    this.routes[ 'main.my_team' ] =
+    {
+        url: '^/my_team',
+        title: 'my_team',
+        templateUrl: 'views/my_team.html',
+        controller: 'MyTeamCtrl'
+    };
+    this.routes[ 'main.my_team_1' ] =
+    {
+        url: '^/my_team_1',
+        title: 'my_team_1',
+        templateUrl: 'views/my_team_1.html',
+        controller: 'MyTeamCtrl'
+    };
+    this.routes[ 'main.my_team_2' ] =
+    {
+        url: '^/my_team_2',
+        title: 'my_team_2',
+        templateUrl: 'views/my_team_2.html',
+        controller: 'MyTeamCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',

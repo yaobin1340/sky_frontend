@@ -72,13 +72,13 @@ ul,ol{
     font-size: 16px;
 }
 .header_photo_user_name{
-    color: #cccccc;font-size: 14px;margin-top: -28px;
+    color: #ffffff;font-size: 14px;margin-top: -28px;
 }
 .user_center_content_1{
     width: 100%; background: #ffffff;
 }
 .shop_index_section_table{
-    font-family: 'Hiragino Sans GB W3';background: #ffffff;width: 100%;text-align: center;color: #0aa0ef;
+    font-family: 'Hiragino Sans GB W3';background: #ffffff;width: 100%;text-align: center;color: #0aa0ef;font-size: 16px;
 }
 .shop_index_section_table .td_border{
     border: 1px solid #eeeeee;
@@ -88,7 +88,7 @@ ul,ol{
     color: #0aa0ef;
 }
 .shop_index_section_content_all{
-    background: #ffffff;margin-top: 10px;width: 100%;
+    background: #ffffff;margin-top: 10px;width: 100%;font-size: 16px;
 }
 .shop_index_section_content_all .shop_index_section_content_list{
     padding: 15px;border-bottom: 1px solid #e3e3e3;
@@ -116,4 +116,5 @@ ul,ol{
 }
 .shop_index_section_btn{
     width: 94%;margin: 0 auto;display: block;margin-top: 20px;background: #fd4e87;border: 1px solid #ffffff;color: #ffffff;padding: 10px 0;border-radius: 10px;
+    font-size: 15px;
 }
