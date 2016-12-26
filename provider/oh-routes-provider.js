@@ -118,6 +118,13 @@ angular
         templateUrl: 'views/my_team_2.html',
         controller: 'MyTeamCtrl'
     };
+    this.routes[ 'main.my_shop_order' ] =
+    {
+        url: '^/my_shop_order',
+        title: 'my_shop_order',
+        templateUrl: 'views/my_shop_order.html',
+        controller: 'MyShopOrderCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
