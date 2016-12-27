@@ -1,6 +1,62 @@
 <link rel="stylesheet" href="/assets/css/showinformation.css">
-<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-   <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-         <img ng-src="{{slide.image}}" style="width:100%;margin:auto;">
-   </div>
+
+<div class="indexBanner">
+    <div class="slides">
+        <div class="images">
+            <a href="">
+                <img src="/assets/images/home_icon_12series.png" class="mobileImg"/>
+            </a>
+        </div>
+
+        <div class="images">
+            <a href="">
+                <img src="/assets/images/data_icon_click.png" class="mobileImg"/>
+            </a>
+        </div>
+
+        <div class="images">
+            <a href="">
+                <img src="/assets/images/gohere.png" class="mobileImg"/>
+            </a>
+        </div>
+    </div>
 </div>
+
+<script type="text/javascript" src="/assets/js/jquery.slides.min.js"></script>
+
+<script>
+    $(function(){
+        var WinW = $(window).width();
+        if($('.slides .images').size()>1 && WinW>480){
+            $('.slides').slidesjs({
+                width:1500,
+                height:700,
+                play: {
+                    effect: "slide",
+                    interval: 3000,
+                    auto: true,
+                    swap: true,
+                    restartDelay: 2500,
+                    pauseOnHover:true
+                }
+            })
+            var w=$('.slides ul').width()/2;
+            $('.slides ul').css('margin-left',-w);
+        } else if(WinW<481){
+            $('.slides').slidesjs({
+                width:480,
+                height:327,
+                play: {
+                    effect: "slide",
+                    interval: 3000,
+                    auto: true,
+                    swap: true,
+                    restartDelay: 2500,
+                    pauseOnHover:true
+                }
+            })
+            var w=$('.slides ul').width()/2;
+            $('.slides ul').css('margin-left',-w);
+        }
+    });
+</script>
