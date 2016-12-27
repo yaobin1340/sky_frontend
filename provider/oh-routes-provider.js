@@ -153,6 +153,12 @@ angular
         templateUrl : 'views/product_detail.html',
         controller : 'ProductDetailCtrl'
     };
+    this.routes['order_cart'] = {
+        url : '/order_cart',
+        templateUrl : 'views/order_cart.html',
+        controller : 'OrderCartCtrl'
+    };
+
 
     this.$get = function()
     {
