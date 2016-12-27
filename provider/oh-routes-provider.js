@@ -148,6 +148,11 @@ angular
         templateUrl : 'views/information_revise.html',
         controller : 'InformationReviseCtrl'
     };
+    this.routes['product_detail'] = {
+        url : '/product_detail',
+        templateUrl : 'views/product_detail.html',
+        controller : 'ProductDetailCtrl'
+    };
 
     this.$get = function()
     {
