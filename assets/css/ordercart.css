@@ -18,11 +18,8 @@ ul,ol{
 .register_header_back{
     line-height: 50px;font-size: 20px;float: left;margin-left:5px ;color: #ffffff;
 }
-.sky_my_income{
-    margin-top: 50px;width: 100%;padding-bottom: 80px;
-}
 .order_cart_div_num{
-    margin-top: 50px;width: 100%;padding-bottom: 80px;
+   margin-top: 50px;padding-bottom: 80px;
 }
 .order_cart_div_num .order_cart_div_num_1{
     float: left;
