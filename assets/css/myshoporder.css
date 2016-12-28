@@ -61,7 +61,7 @@ p{
 
 }
 .main_content_one{
-    width: 80%;
+    width: 90%;
     font-size: 16px;
     color: #3d4245;
     overflow: hidden;
@@ -69,6 +69,10 @@ p{
     display: -webkit-box;
     -webkit-line-clamp:1;
     -webkit-box-orient:vertical;
+    /*display: block;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
 }
 .main_content_two{
     font-size: 15px;

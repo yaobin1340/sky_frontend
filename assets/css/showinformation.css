@@ -1,18 +1,50 @@
 body{
     background-image: url(../../assets/images/shujubeijing.png);
     background-size: cover;
+    height: 100%;
 }
+html{
+    height: 100%;
+}
+.images{
+    /*background: blue;*/
+}
+.show_information_lunbo_header_img{
+    background-image:url(../../assets/images/shujutou1.png) ;
+    background-size: cover;
+    width: 100%;
+    height: 80px;
+}
+.show_information_lunbo_header_english{
+    padding:8%;padding-left: 14%;color: #ffffff;
+}
+.show_information_lunbo_header_title{
+   padding-left: 14%;color: #ffffff;margin-top: -20px;font-size: 16px;
+}
+.slidesjs-control{
+    width: 96%;
+    height: 500px;
+}
+/*.show_information_lunbo_header_img2_data{*/
+    /*height: 100px;*/
+/*}*/
 
-
-
-
-
-
-
-
-
-
-
+.element.style{
+    width: 100%;
+    height: 500px;
+}
+.slidesjs-container{
+    width: 100%;
+    height: 500px;
+    background: blue;
+}
+div .slidesjs-control{
+    height: 500px;
+}
+.images .slidesjs-slide{
+    width: 100%;
+    height: 500px;
+}
 
 footer{
     width: 100%;height: 60px; position:fixed; bottom:0;background-color: #ffffff;z-index: 55;border-top:1px solid #e9e9e9;color: #696969;
