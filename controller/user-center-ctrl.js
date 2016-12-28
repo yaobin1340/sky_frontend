@@ -22,6 +22,7 @@ angular
 		}).success(function (data) {
 			if(data.success){
 				$scope.user_info = data.user_info
+				$scope.sum_count = data.sum_count
 			}else{
 				$mdToast.show(
 					$mdToast.simple()
