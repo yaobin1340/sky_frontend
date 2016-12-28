@@ -9,10 +9,10 @@
         <img src="/assets/images/userimg.png">
         <div class="header_photo">
             <div class="header_photo_user">
-                <img src="/assets/images/user.jpg" id="image1">
+                <img src="{{api_uri}}upload/face/{{user_info.face}}" id="image1">
             </div>
             <div class="user_center_user_id">
-                姚斌<span>(ID:1316)</span>
+                {{user_info.rel_name}}<span>(ID:{{user_info.id}})</span>
                 <div class="header_photo_user_name">联合服务商</div>
             </div>
         </div>
@@ -20,11 +20,11 @@
     <table class="shop_index_section_table" border="0">
         <tr>
             <td class="td_border">
-                <span>100</span><br>
+                <span>{{user_info.integral}}</span><br>
                 <span>葵花籽</span>
             </td>
             <td class="td_border">
-                <span>62</span><br>
+                <span>{{parseInt(user_info.ax12)+parseInt(user_info.ax6)+parseInt(user_info.ax24)}}</span><br>
                 <span>向日葵</span>
             </td>
             <td class="td_border">
@@ -80,7 +80,7 @@
         </a>
     </div>
     <div>
-        <a href=""><button class="shop_index_section_btn">退出登录</button></a>
+        <a href=""><button class="shop_index_section_btn" ng-click="logout()">退出登录</button></a>
     </div>
 </div>
 </body>

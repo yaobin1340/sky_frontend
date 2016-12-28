@@ -1,192 +1,104 @@
 <link rel="stylesheet" href="/assets/css/listorders.css">
 <style>
-   .panel-default>.panel-heading{
+    .panel-default > .panel-heading {
         background: none;
         border-style: none;
-       /*display: none;*/
+        /*display: none;*/
     }
-    #accordiongroup-11-6916-tab{
-       border-style: none;
-      }
-    span.ng-binding{
+
+    #accordiongroup-11-6916-tab {
+        border-style: none;
+    }
+
+    span.ng-binding {
         /*float: right;*/
         border-style: none;
     }
-   .panel-heading{
-       border-style: none;
-       padding-left: 0;
-   }
-   .panel-default>.panel-heading{
-       border-style: none;
-       border-color: #ffffff;
-   }
-    .panel-title{
-        font-size: 16px;color: #179fed;
+
+    .panel-heading {
+        border-style: none;
+        padding-left: 0;
     }
-   .am-icon-list-ul{
-       font-size: 18px;
-   }
+
+    .panel-default > .panel-heading {
+        border-style: none;
+        border-color: #ffffff;
+    }
+
+    .panel-title {
+        font-size: 16px;
+        color: #179fed;
+    }
+
+    .am-icon-list-ul {
+        font-size: 18px;
+    }
 </style>
 <div class="body_all">
-  <div class="register_one_header">
-       <span class="register_header_title">我的订单</span>
+    <div class="register_one_header">
+        <span class="register_header_title">我的订单</span>
         <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
-  </div>
-  <div class="sky_list_orders_content_one">
+    </div>
+    <div class="sky_list_orders_content_one">
         <span class="am-icon-list-ul">&nbsp;订单列表</span>
-        <span class="sky_list_orders_content_price">&nbsp;总营业额：<span>100</span></span>
-  </div>
- <div>
-    <div class="sky_list_orders_content_two">
-        <span class="sky_list_orders_content_two_shoptitle">爆米花咖啡馆（虹桥）</span>
-        <span class="sky_list_orders_content_two_shoptime">&nbsp;2016-10-21&nbsp;14:35</span>
+        <span class="sky_list_orders_content_price">&nbsp;总营业额：<span>{{total/100}}</span></span>
     </div>
-    <div class="sky_list_orders_content_three">
-        <div>地址：虹桥路1744号二楼</div>
-        <div>电话：15850293624</div>
-    </div>
-    <div class="sky_list_orders_content_four">
-        <div>实付：<span class="sky_list_orders_content_four_price">￥1280</span></div>
-        <div>付款时间：<span class="sky_list_orders_content_four_time">2016-10-21 14:35</span></div>
-        <div class="sky_list_orders_content_four_pending">审核中</div>
-    </div>
-    <div class="sky_list_orders_content_five">
-        <p style="padding-bottom: 10px;">
-            <span>店铺评价</span>
-            <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-            <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-            <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
-            <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-            <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-        </p>
-        <uib-accordion close-others="oneAtATime">
-            <div uib-accordion-group class="panel-default" heading="我要评价" is-open="" is-disabled="status.isFirstDisabled">
-                <div>
-                <div class="sky_list_orders_content_six_username">我的用户名</div>
-                <div>
-                <p>
-                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
+    <div infinite-scroll='orders.nextPage()' infinite-scroll-disabled='orders.busy' infinite-scroll-distance='1'>
+        <div ng-repeat="item in orders.items">
+            <div class="sky_list_orders_content_two">
+                <span class="sky_list_orders_content_two_shoptitle">{{item.shop_name}}</span>
+                <span class="sky_list_orders_content_two_shoptime">{{item.cdate}}</span>
+            </div>
+            <div class="sky_list_orders_content_three">
+                <div>地址：{{item.address}}</div>
+                <div>电话：{{item.mobile}}</div>
+            </div>
+            <div class="sky_list_orders_content_four">
+                <div>实付：<span class="sky_list_orders_content_four_price">￥{{item.price/100}}</span></div>
+                <div class="sky_list_orders_content_four_pending" ng-if="item.status == 1">待提交</div>
+                <div class="sky_list_orders_content_four_pending" ng-if="item.status == 2">待审核</div>
+                <div class="sky_list_orders_content_four_pending" ng-if="item.status == 3">已完成</div>
+            </div>
+            <div class="sky_list_orders_content_five">
+                <p style="padding-bottom: 10px;">
+                    <span>店铺评价</span>
+                    <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                    <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                    <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
+                    <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                    <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
                 </p>
-                </div>
-                <div class="sky_list_orders_content_six_userassess">
-                <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
-                </div>
-                <div class="sky_list_orders_content_six_userimg">
-                <img src="../../assets/images/shop.jpg">
-                <img src="../../assets/images/shop.jpg">
-                <img src="../../assets/images/shop.jpg">
-                <img src="../../assets/images/shop.jpg">
-                </div></div>
-                </div>
-        </uib-accordion>
-
-    </div>
-</div>
- <div>
-        <div class="sky_list_orders_content_two">
-            <span class="sky_list_orders_content_two_shoptitle">爆米花咖啡馆（虹桥）</span>
-            <span class="sky_list_orders_content_two_shoptime">&nbsp;2016-10-21&nbsp;14:35</span>
-        </div>
-        <div class="sky_list_orders_content_three">
-            <div>地址：虹桥路1744号二楼</div>
-            <div>电话：15850293624</div>
-        </div>
-        <div class="sky_list_orders_content_four">
-            <div>实付：<span class="sky_list_orders_content_four_price">￥1280</span></div>
-            <div>付款时间：<span class="sky_list_orders_content_four_time">2016-10-21 14:35</span></div>
-            <div class="sky_list_orders_content_four_pending">审核中</div>
-        </div>
-        <div class="sky_list_orders_content_five">
-            <p style="padding-bottom: 10px;">
-                <span>店铺评价</span>
-                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-            </p>
-            <uib-accordion close-others="oneAtATime">
-                <div uib-accordion-group class="panel-default" heading="我要评价" is-open="" is-disabled="status.isFirstDisabled">
-                    <div>
-                        <div class="sky_list_orders_content_six_username">我的用户名</div>
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" heading="我要评价" is-open=""
+                         is-disabled="status.isFirstDisabled">
                         <div>
-                            <p>
-                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                                <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
-                            </p>
+                            <div class="sky_list_orders_content_six_username">我的用户名</div>
+                            <div>
+                                <p>
+                                    <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                                    <i><img src="../../assets/images/productdetails_star_icon.png"></i>
+                                    <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
+                                    <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                                    <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
+                                    <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
+                                </p>
+                            </div>
+                            <div class="sky_list_orders_content_six_userassess">
+                                <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
+                            </div>
+                            <div class="sky_list_orders_content_six_userimg">
+                                <img src="../../assets/images/shop.jpg">
+                                <img src="../../assets/images/shop.jpg">
+                                <img src="../../assets/images/shop.jpg">
+                                <img src="../../assets/images/shop.jpg">
+                            </div>
                         </div>
-                        <div class="sky_list_orders_content_six_userassess">
-                            <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
-                        </div>
-                        <div class="sky_list_orders_content_six_userimg">
-                            <img src="../../assets/images/shop.jpg">
-                            <img src="../../assets/images/shop.jpg">
-                            <img src="../../assets/images/shop.jpg">
-                            <img src="../../assets/images/shop.jpg">
-                        </div></div>
-                </div>
-            </uib-accordion>
+                    </div>
+                </uib-accordion>
 
+            </div>
         </div>
     </div>
- <div>
-        <div class="sky_list_orders_content_two">
-            <span class="sky_list_orders_content_two_shoptitle">爆米花咖啡馆（虹桥）</span>
-            <span class="sky_list_orders_content_two_shoptime">&nbsp;2016-10-21&nbsp;14:35</span>
-        </div>
-        <div class="sky_list_orders_content_three">
-            <div>地址：虹桥路1744号二楼</div>
-            <div>电话：15850293624</div>
-        </div>
-        <div class="sky_list_orders_content_four">
-            <div>实付：<span class="sky_list_orders_content_four_price">￥1280</span></div>
-            <div>付款时间：<span class="sky_list_orders_content_four_time">2016-10-21 14:35</span></div>
-            <div class="sky_list_orders_content_four_pending">审核中</div>
-        </div>
-        <div class="sky_list_orders_content_five">
-            <p style="padding-bottom: 10px;">
-                <span>店铺评价</span>
-                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-            </p>
-            <uib-accordion close-others="oneAtATime">
-                <div uib-accordion-group class="panel-default" heading="我要评价" is-open="" is-disabled="status.isFirstDisabled">
-                    <div>
-                        <div class="sky_list_orders_content_six_username">我的用户名</div>
-                        <div>
-                            <p>
-                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_star_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_halfstar_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                                <i><img src="../../assets/images/productdetails_graystar_icon.png"></i>
-                                <span class="sky_list_orders_content_six_usertime">2016-10-21</span>
-                            </p>
-                        </div>
-                        <div class="sky_list_orders_content_six_userassess">
-                            <p>在这家店吃的生日餐真的很棒，吃的饱饱的，环境和菜品都真的很棒！</p>
-                        </div>
-                        <div class="sky_list_orders_content_six_userimg">
-                            <img src="../../assets/images/shop.jpg">
-                            <img src="../../assets/images/shop.jpg">
-                            <img src="../../assets/images/shop.jpg">
-                            <img src="../../assets/images/shop.jpg">
-                        </div></div>
-                </div>
-            </uib-accordion>
 
-        </div>
-    </div>
+
 </div>
