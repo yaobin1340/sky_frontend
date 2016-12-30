@@ -78,17 +78,22 @@ ul,ol{
     width: 100%; background: #ffffff;
 }
 .shop_index_section_table{
-    font-family: 'Hiragino Sans GB W3';background: #ffffff;width: 100%;text-align: center;color: #0aa0ef;font-size: 16px;
+    font-family: 'Hiragino Sans GB W3';background: #ffffff;width: 100%;text-align: center;color: #0aa0ef;font-size: 16px;padding-bottom: 10px;
 }
 .shop_index_section_table .td_border{
     border: 1px solid #eeeeee;
     width:33%;
+    padding-bottom: 5px;
 }
 .shop_index_section_table .td_border a{
     color: #0aa0ef;
 }
+.split_line{
+    width: 100%;height: 10px;background: #ecf2eb;
+}
+
 .shop_index_section_content_all{
-    background: #ffffff;margin-top: 10px;width: 100%;font-size: 16px;
+    background: #ffffff;width: 100%;font-size: 16px;
 }
 .shop_index_section_content_all .shop_index_section_content_list{
     padding: 15px;border-bottom: 1px solid #e3e3e3;

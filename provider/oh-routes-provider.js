@@ -139,6 +139,13 @@ angular
         templateUrl: 'views/shop_order_manage.html',
         controller: 'ShopOrderManageCtrl'
     };
+    this.routes[ 'main.shop_order_submit' ] =
+    {
+        url: '^/shop_order_submit',
+        title: 'shop_order_submit',
+        templateUrl: 'views/shop_order_submit.html',
+        controller: 'ShopOrderSubmitCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
