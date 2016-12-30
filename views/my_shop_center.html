@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/assets/css/usercenter.css">
+<body class="user_center_body_all">
+<div class="body_all">
+    <div class="register_one_header">
+        <span class="register_header_title">我的商家</span>
+        <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+    </div>
+    <div class="header_center">
+        <img src="/assets/images/mybusiness_backgroundimage.png">
+        <div class="header_photo">
+            <div class="header_photo_user">
+                <img src="/assets/images/user.jpg" id="image1">
+            </div>
+            <div class="user_center_user_id">
+                阿迪达斯专卖店<span>(ID:123)</span>
+                <div class="header_photo_user_name">市级代理</div>
+                <!--<div class="header_photo_user_name" ng-if="user_info.is_dl == 1">普通用户</div>-->
+                <!--<div class="header_photo_user_name" ng-if="user_info.is_dl == 2">服务商</div>-->
+                <!--<div class="header_photo_user_name" ng-if="user_info.is_dl == 3">联合服务商</div>-->
+                <!--<div class="header_photo_user_name" ng-if="user_info.is_dl == 5">省级代理</div>-->
+            </div>
+        </div>
+    </div>
+    <table class="shop_index_section_table" border="0">
+        <tr>
+            <td class="td_border">
+                <span>0</span><br>
+                <span>营业额</span>
+            </td>
+            <td class="td_border">
+                <span>0</span><br>
+                <span>向日葵</span>
+            </td>
+            <td class="td_border">
+                <a href="#">
+                    <span><img src="../../assets/images/personalcenter_icons_merchant.png"></span><br>
+                    <span>成为商家</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <div class="shop_index_section_content_all">
+        <a >
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-cogs user_center_list_name">&nbsp;订单管理</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a >
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-credit-card user_center_list_name">&nbsp;订单提交</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+        <a >
+            <div class="shop_index_section_content_list">
+                <span class="am-icon-cart-plus user_center_list_name">&nbsp;店铺资料</span>
+                <span class="user_center_list_right">></span>
+            </div>
+        </a>
+    </div>
+    <!--<div>-->
+        <!--<a href=""><button class="shop_index_section_btn" ng-click="logout()">退出登录</button></a>-->
+    <!--</div>-->
+</div>
+<script>
+    $('#image1')
+            .load(function(){
+            })
+            .error(function(){
+                $('#image1').attr('src',"/assets/images/registered_avatar@2x.png")
+            });
+
+</script>
+
+</body>

@@ -37,6 +37,13 @@
     </div>
     <div class="product_detail_7"></div>
     <div class="product_detail_6">
+        <span>选择商品分类</span>
+    </div>
+    <div class="product_detail_6">
+        <button id="btn1" onclick="btn1()">官方套餐</button><button id="btn2" onclick="btn2()">官方套餐+咖啡</button><button id="btn3" onclick="btn3()">官方套餐+茶</button>
+    </div>
+    <div class="product_detail_7"></div>
+    <div class="product_detail_6">
         <span class="product_pro">商品介绍</span>
     </div>
     <div class="product_detail_6">
@@ -83,3 +90,29 @@
             </tr>
         </table>
     </div>
+    <script>
+       function btn1() {
+           $("#btn1").css("background","#f34e87");
+           $("#btn1").css("color","#ffffff");
+           $("#btn2").css("background","#e3e3e3");
+           $("#btn2").css("color","#000000");
+           $("#btn3").css("background","#e3e3e3");
+           $("#btn3").css("color","#000000");
+       }
+       function btn2() {
+           $("#btn2").css("background","#f34e87");
+           $("#btn2").css("color","#ffffff");
+           $("#btn1").css("background","#e3e3e3");
+           $("#btn1").css("color","#000000");
+           $("#btn3").css("background","#e3e3e3");
+           $("#btn3").css("color","#000000");
+       }
+       function btn3() {
+           $("#btn3").css("background","#f34e87");
+           $("#btn3").css("color","#ffffff");
+           $("#btn1").css("background","#e3e3e3");
+           $("#btn1").css("color","#000000");
+           $("#btn2").css("background","#e3e3e3");
+           $("#btn2").css("color","#000000");
+       }
+    </script>

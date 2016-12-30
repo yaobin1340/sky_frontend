@@ -125,6 +125,20 @@ angular
         templateUrl: 'views/my_shop_order.html',
         controller: 'MyShopOrderCtrl'
     };
+    this.routes[ 'main.my_shop_center' ] =
+    {
+        url: '^/my_shop_center',
+        title: 'my_shop_center',
+        templateUrl: 'views/my_shop_center.html',
+        controller: 'MyShopCenterCtrl'
+    };
+    this.routes[ 'main.shop_order_manage' ] =
+    {
+        url: '^/shop_order_manage',
+        title: 'shop_order_manage',
+        templateUrl: 'views/shop_order_manage.html',
+        controller: 'ShopOrderManageCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
