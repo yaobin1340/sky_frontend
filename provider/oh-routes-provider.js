@@ -184,7 +184,11 @@ angular
         templateUrl : 'views/manage_shop_info.html',
         controller : 'ManageShopInfoCtrl'
     };
-
+    this.routes['my_add_orders'] = {
+        url : '/my_add_orders',
+        templateUrl : 'views/my_add_orders.html',
+        controller : 'MyAddOrdersCtrl'
+    };
 
     this.$get = function()
     {

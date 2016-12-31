@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/assets/css/shopinfo.css">
+<link rel="stylesheet" href="/assets/css/myaddorders.css">
+<div class="register_one_header">
+    <span class="register_header_title">添加订单</span>
+    <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+</div>
+<div class="my_add_orders_all">
+    <form id="save_form" class="am-form" data-am-validator action="" method="post">
+        <div class="am-form-group am-form-icon merchants_settled_information">
+            <i class="am-icon-mobile-phone" style="font-size: 20px;"></i>
+            <input id="merchants_settled_information_input_1" type="text" name="shop_name" class="am-form-field user_add_phone merchants_settled_information_input disabled" placeholder="请输入商家名称" required  />
+        </div>
+        <div class="am-form-group am-form-icon merchants_settled_information">
+            <i class="am-icon-user"></i>
+            <input id="merchants_settled_information_input_2" type="text" name="shop_name" class="am-form-field user_add_phone merchants_settled_information_input disabled" placeholder="请输入商家名称" required  />
+        </div>
+        <div class="am-form-group am-form-icon merchants_settled_information">
+            <i class="am-icon-rmb"></i>
+            <input id="merchants_settled_information_input_3" type="text" name="shop_name" class="am-form-field user_add_phone merchants_settled_information_input disabled" placeholder="请输入商家名称" required  />
+        </div>
+        <div class="am-form-group am-form-icon merchants_settled_information">
+           <button>添加</button><button ui-sref="main.shop_order_manage">取消</button>
+        </div>
+
+    </form>
+</div>
