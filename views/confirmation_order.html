@@ -4,8 +4,11 @@
     <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
 </div>
 <div class="sky_my_income">
-    <div class="confirmation_order_name_address">
-        <div class="confirmation_order_name">周小婷<span>&nbsp;&nbsp;15850293624</span></div>
+    <div ui-sref="receive_address_manage" class="confirmation_order_name_address">
+        <div class="confirmation_order_name">周小婷
+            <span>&nbsp;&nbsp;15850293624</span>
+            <span style="float: right;"><img src="../../assets/images/mail_icon_arrow.png" /></span>
+        </div>
         <div class="confirmation_order_address">江苏省 苏州市 昆山市 学院路 999 号美居客 号美居客 号美居客 号美居客</div>
     </div>
     <div class="confirmation_order_image_fenge"><img src="/assets/images/mall_icon_envelope.png"></div>
@@ -55,9 +58,9 @@
     <div class="confirmation_order_goods_user_advice">
         <textarea placeholder="选填：给商家留言(45字)以内"></textarea>
     </div>
-    <div class="confirmation_order_goods_pay_price">
+    <div class="confirmation_order_goods_pay_price" style="position: fixed;bottom: 0;">
         <div class="confirmation_order_goods_pay">实时付款</div>
-        <div style="margin-top: -5px;padding-left: 20px;color:#fe5f91;">实付款：￥44.00<span style="float: right;margin-right: 5%;margin-top: -10px;"><img src="/assets/images/mall_icon_buyimmediately.png" style="float: right;"></span></div>
+        <div style="margin-top: -5px;padding-left: 20px;color:#fe5f91;">实付款：￥44.00<span style="float: right;margin-right: 5%;margin-top: -10px;"><img ui-sref="main.cashier_desk" src="/assets/images/mall_icon_buyimmediately.png" style="position: absolute;bottom: 0;right: 0;"></span></div>
     </div>
     </div>
 </div>

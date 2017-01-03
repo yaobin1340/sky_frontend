@@ -146,6 +146,13 @@ angular
         templateUrl: 'views/shop_order_submit.html',
         controller: 'ShopOrderSubmitCtrl'
     };
+    this.routes[ 'main.cashier_desk' ] =
+    {
+        url: '^/cashier_desk',
+        title: 'cashier_desk',
+        templateUrl: 'views/cashier_desk.html',
+        controller: 'CashierDeskCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',
@@ -193,6 +200,11 @@ angular
         url : '/confirmation_order',
         templateUrl : 'views/confirmation_order.html',
         controller : 'ConfirmationOrderCtrl'
+    };
+    this.routes['receive_address_manage'] = {
+        url : '/receive_address_manage',
+        templateUrl : 'views/receive_address_manage.html',
+        controller : 'ReceiveAddressManageCtrl'
     };
 
     this.$get = function()
