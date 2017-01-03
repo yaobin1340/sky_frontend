@@ -189,6 +189,11 @@ angular
         templateUrl : 'views/my_add_orders.html',
         controller : 'MyAddOrdersCtrl'
     };
+    this.routes['confirmation_order'] = {
+        url : '/confirmation_order',
+        templateUrl : 'views/confirmation_order.html',
+        controller : 'ConfirmationOrderCtrl'
+    };
 
     this.$get = function()
     {
