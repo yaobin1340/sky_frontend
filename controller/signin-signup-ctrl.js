@@ -11,7 +11,7 @@ angular
 		var $mdMedia = $injector.get('$mdMedia');
 		var $mdToast = $injector.get('$mdToast');
 
-		$scope.page = $rootScope.$page
+		$scope.page = '-------'
 
 		$scope.signin = function () {
 			$http({
@@ -169,6 +169,19 @@ angular
 					},
 					1000)
 			}
+		}
+
+		$scope.testModals = function(ev){
+		            $mdDialog.show({
+                            scope: $scope,
+                            preserveScope: true,
+                            templateUrl: 'views/modals/a.html',
+                            parent: angular.element(document.body),
+                            targetEvent: ev,
+                            clickOutsideToClose: true,
+                            fullscreen: true
+
+                        });
 		}
 
 	});
