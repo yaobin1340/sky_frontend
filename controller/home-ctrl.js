@@ -42,8 +42,8 @@ angular
                             );
                         }else{
                             $scope.shops.area_code = data;
-                            alert(data)
                             $scope.shops.busy = false;
+                            $scope.$apply();
                             $scope.shops.nextPage()
                         }
                     })
