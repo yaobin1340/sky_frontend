@@ -27,7 +27,7 @@ angular
             }).success(function (data) {
                 if (data.success) {
                     $http({
-                        method: 'GET',
+                        method: 'POST',
                         url:$config.api_uri + '/Apiftontend/use_QQmap',
                         data:{lat:$scope.shops.lat,lng:$scope.shops.lng}
                     }).success(function (data) {
