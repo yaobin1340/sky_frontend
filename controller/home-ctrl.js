@@ -26,27 +26,12 @@ angular
 		    $http({
                 method: 'POST',
                 url: $config.api_uri + '/Apiftontend/index',
-                data: {},
+                data: {lat:$scope.shops.lat,lng:$scope.shops.lat}
             }).success(function (data) {
                 if (data.success) {
-                    $http({
-                        method: 'POST',
-                        url:$config.api_uri + '/Apiftontend/use_QQmap',
-                        data:{lat:$scope.shops.lat,lng:$scope.shops.lng}
-                    }).success(function (data) {
-                        if(data == -1){
-                            $mdToast.show(
-                                $mdToast.simple()
-                                    .content('获取地理信息失败')
-                                    .hideDelay(2000)
-                            );
-                        }else{
-                            $scope.shops.area_code = data;
-                            $scope.shops.busy = false;
-//                            $scope.$apply();
-                            $scope.shops.nextPage()
-                        }
-                    })
+                    $scope.shops.area_code = data.area_code;
+                    $scope.shops.busy = false;
+                    $scope.shops.nextPage()
                 } else {
                     $mdToast.show(
                         $mdToast.simple()
