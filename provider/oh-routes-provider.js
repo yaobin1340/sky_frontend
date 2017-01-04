@@ -165,6 +165,11 @@ angular
         templateUrl : 'views/signup.html',
         controller : 'SigninSignupCtrl'
     };
+    this.routes['signup1'] = {
+        url : '/signup1',
+        templateUrl : 'views/signup1.html',
+        controller : 'SigninSignupCtrl'
+    };
 
     this.routes['forgot_pwd'] = {
         url : '/forgot_pwd',

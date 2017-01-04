@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+}
+.register_one_header{
+    width: 100%;text-align: center;background: #01a2f2;color: #ffffff;position: fixed;top: 0;z-index: 222;
+}
+.register_header_title{
+    text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';
+}
+.register_header_back{
+    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;color: #ffffff;
+}
+.sky_my_income{
+    margin-top: 50px;width: 100%;
+}
+#check{
+    line-height: 1;
+    z-index: 2;
+    margin-top: 1em;
+    margin-right: .5em;
+}
+.form-control {
+    height: 50px;
+    padding: .5em;
+    font-size: 1.6rem;
+}
+.error{
+    border: 1px solid red;
+}

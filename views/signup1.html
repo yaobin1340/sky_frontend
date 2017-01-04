@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="/assets/css/informationrevise.css">
+<link rel="stylesheet" href="/assets/css/merchantssettled.css">
+<link rel="stylesheet" href="/assets/css/skyregister.css">
+<style>
+    .error{
+        border: 1px solid red;
+    }
+</style>
+<div class="register_one_header">
+    <span class="register_header_title">会员注册</span>
+    <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+</div>
+<div class="sky_my_income">
+    <div class="am-g body_all">
+        <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+            <form id="save_form" class="am-form-inline am-form" method="post" action="" name="signUpForm" ng-submit="submitForm()">
+                <div class="am-form-group am-form-file upload_img_all">
+                    <input id="file" type="file" accept="image/*" capture=camera" />
+                    <div class="upload_img_div1">
+                        <div class="upload_img_div2">
+                            <img src="/assets/images/registered_avatar@2x.png" id="previewResult">
+                        </div>
+                        <button id="btn_file" type="button" class="am-btn am-btn-danger am-btn-sm upload_img_btn">
+                            <i class="am-icon-cloud-upload"></i> 修改头像
+                        </button>
+                        <input type="hidden" id="img_input">
+                    </div>
+                </div>
+                <div class="am-form-group am-form-icon">
+                    <i class="am-icon-lock" style="margin-left: -2%;"></i>
+                    <input style="border-radius: 10px;" type="password" name="password"
+                           ng-model="password"
+                           ng-class="{'error':signUpForm.password.$invalid && signUpForm.password.$touched}"
+                           ng-minlength="6"
+                           ng-maxlength="12"
+                           required
+                           class="am-form-field am-form-mobile form-control aa"
+                           placeholder="请输入您的密码(至少6位字符)"/>
+                </div>
+                <div class="am-form-group am-form-icon">
+                    <i class="am-icon-lock" style="margin-left: -2%;"></i>
+                    <input style="border-radius: 10px;" type="password" name="pwd"
+                           ng-model="pwd"
+                           ng-class="{'error':signUpForm.pwd.$invalid && signUpForm.pwd.$touched}"
+                           ng-minlength="6"
+                           ng-maxlength="12"
+                           required
+                           class="am-form-field am-form-mobile form-control"
+                           placeholder="请确认您的密码"/>
+                </div>
+                <div class="am-form-group am-form-icon">
+                    <i class="am-icon-mobile-phone" style="margin-left: -5%;"></i>
+                    <input style="border-radius: 10px;" type="number" name="mobile"
+                           ng-model="mobile"
+                           ng-class="{'error':signUpForm.mobile.$invalid && signUpForm.mobile.$touched}"
+                           ng-minlength="11"
+                           ng-maxlength="11"
+                           required
+                           class="am-form-field am-form-mobile form-control"
+                           placeholder="请输入您的手机号(11位)"/>
+                </div>
+                <div class="am-input-group" style="width: 100%;">
+                    <select style="width: 100%;" id="province_code" name="province_code" required>
+                        <option value="">-请选择省份-</option>
+                        <option value="">-苏州-</option>
+                        <!--<option value="" selected="selected">江苏省</option>-->
+                    </select>
+                    <select style="width: 100%;" id="city_code" name="city_code">
+                        <option value="">-请选择城市-</option>
+                        <!--<option value="" selected="selected">苏州市</option>-->
+                    </select>
+                    <select style="width: 100%;" id="area_code" name="area_code">
+                        <option value="">-请选择区域-</option>
+                        <!--<option value="" selected="selected">昆山市</option>-->
+                    </select>
+                </div>
+                <div class="am-form-group am-form-icon" style="margin-top: 15px;">
+                    <i class="am-icon-user" style="margin-left: -3%;"></i>
+                    <input style="border-radius: 10px;" type="text" name="username"
+                           ng-model="username"
+                           ng-class="{'error':signUpForm.username.$invalid && signUpForm.username.$touched}"
+                           required
+                           class="am-form-field am-form-mobile form-control"
+                           placeholder="请输入您的姓名"/>
+                </div>
+                <div class="am-form-group am-form-icon">
+                    <i class="am-icon-mobile-phone" style="margin-left: -5%;"></i>
+                    <input style="border-radius: 10px;" type="number" name="number"
+                           ng-model="number"
+                           ng-class="{'error':signUpForm.number.$invalid && signUpForm.number.$touched}"
+                           ng-minlength="18"
+                           ng-maxlength="18"
+                           required
+                           class="am-form-field am-form-mobile form-control"
+                           placeholder="请输入您的身份证号码(18位)"/>
+                </div>
+                <div class="information_revise_btn_confirm" style="width: 100%;">
+                    <input style="width: 100%;" id="save_btn" class="am-btn am-btn-secondary am-btn-block information_revise_btn_confirm_back" type="button" value="注册" ng-disabled="signUpForm.$invalid">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
