@@ -28,7 +28,7 @@ angular
                 if (data.success) {
                     $http({
                         method: 'GET',
-                        url:$config.api_uri + '/Apiftontend/use_QQmap'
+                        url:$config.api_uri + '/Apiftontend/use_QQmap',
                         data:{lat:$scope.shops.lat,lng:$scope.shops.lng}
                     }).success(function (data) {
                         console.log(data)
