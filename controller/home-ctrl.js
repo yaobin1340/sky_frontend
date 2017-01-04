@@ -29,7 +29,6 @@ angular
                 data: {},
             }).success(function (data) {
                 if (data.success) {
-                    alert($scope.shops.lat+'--'+$scope.shops.lng);
                     $http({
                         method: 'POST',
                         url:$config.api_uri + '/Apiftontend/use_QQmap',
@@ -42,7 +41,8 @@ angular
                                     .hideDelay(2000)
                             );
                         }else{
-                            $scope.shops.area_code = '320583';
+                            $scope.shops.area_code = data;
+                            alert(data)
                             $scope.shops.busy = false;
                             $scope.shops.nextPage()
                         }
