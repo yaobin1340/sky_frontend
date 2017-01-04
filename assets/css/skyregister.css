@@ -54,7 +54,23 @@
 .am-slider-default .am-direction-nav a {
     /*display: none;*/
 }
-
+#check{
+    line-height: 1;
+    z-index: 2;
+    margin-top: 1em;
+    margin-right: .5em;
+}
+.form-control {
+    height: 50px;
+    padding: .5em;
+    font-size: 1.6rem;
+}
+.error{
+    border: 1px solid red;
+}
+.sky_register_yzm{
+    width: 60%; height: 50px; position:absolute;left:12px;right:100px;border-radius: 10px;
+}
 
 
 .register_one_header{

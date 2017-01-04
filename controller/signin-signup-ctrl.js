@@ -138,7 +138,7 @@ angular
 		window.wait = 90
 		$scope.get_yzm = function(obj){
 			if(!$("#doc-vld-phone-2").val()){
-				alert('请输入手机号5码');
+				alert('请输入手机号码');
 				return false;
 			}
 //        {{literal}}
@@ -171,17 +171,17 @@ angular
 			}
 		}
 
-		$scope.testModals = function(ev){
-		            $mdDialog.show({
-                            scope: $scope,
-                            preserveScope: true,
-                            templateUrl: 'views/modals/a.html',
-                            parent: angular.element(document.body),
-                            targetEvent: ev,
-                            clickOutsideToClose: true,
-                            fullscreen: true
-
-                        });
-		}
+		// $scope.testModals = function(ev){
+		//             $mdDialog.show({
+         //                    scope: $scope,
+         //                    preserveScope: true,
+         //                    templateUrl: 'views/modals/a.html',
+         //                    parent: angular.element(document.body),
+         //                    targetEvent: ev,
+         //                    clickOutsideToClose: true,
+         //                    fullscreen: true
+        //
+         //                });
+		// }
 
 	});

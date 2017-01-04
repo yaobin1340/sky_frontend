@@ -206,6 +206,11 @@ angular
         templateUrl : 'views/receive_address_manage.html',
         controller : 'ReceiveAddressManageCtrl'
     };
+    this.routes['user_registration_protocol'] = {
+        url : '/user_registration_protocol',
+        templateUrl : 'views/user_registration_protocol.html',
+        controller : 'SigninSignupCtrl'
+    };
 
     this.$get = function()
     {
