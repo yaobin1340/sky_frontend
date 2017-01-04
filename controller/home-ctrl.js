@@ -42,7 +42,7 @@ angular
                                     .hideDelay(2000)
                             );
                         }else{
-                            $scope.shops.area_code = data;
+                            $scope.shops.area_code = '320583';
                             $scope.shops.busy = false;
                             $scope.shops.nextPage()
                         }
