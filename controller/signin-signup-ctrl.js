@@ -14,6 +14,7 @@ angular
 		$scope.page = '-------'
 
 		$scope.signin = function () {
+			alert('ddddd');
 			$http({
 				method: 'POST',
 				url: $config.api_uri + '/Apiftontend/check_login',
