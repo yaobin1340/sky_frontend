@@ -6,6 +6,8 @@ angular.module('ohapp').factory('Shops', function ($config, $http) {
 		this.after = '';
 		this.page = 1;
 		this.end = false;
+		this.lat = '';
+		this.lng = '';
 	};
 
 	Shops.prototype.nextPage = function () {
@@ -16,7 +18,7 @@ angular.module('ohapp').factory('Shops', function ($config, $http) {
 		$http({
 			method: 'POST',
 			url: $config.api_uri + '/Apiftontend/index_loaddata',
-			data: {page:this.page},
+			data: {page:this.page,lat:this.lat,lng:this.lng},
 		}).success(function (data) {
 			if (data.success) {
 				if(!data.shop_list.length){

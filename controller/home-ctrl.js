@@ -14,46 +14,38 @@ angular
 		$scope.currentPage = 0;
 		$scope.scroll_switch = 1;
 		$scope.shops = new Shops();
+		$scope.shops.busy = true;
+		$scope.shops.lat = '';
+		$scope.shops.lng = '';
+		$scope.isReady = false;
 
+		$scope.getIndex = function(){
+		    $http({
+                method: 'POST',
+                url: $config.api_uri + '/Apiftontend/index',
+                data: {},
+            }).success(function (data) {
+                if (data.success) {
+                    $http({
+                        method: 'GET',
+                        url: 'http://apis.map.qq.com/ws/geocoder/v1/?location='+$scope.shops.lat+','+$scope.shops.lng+'&get_poi=1&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77',
+                    }).success(function (data) {
+                        console.log(data)
+                    })
+                } else {
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .content(data.error_msg)
+                            .hideDelay(2000)
+                    );
+                }
 
-		$http({
-			method: 'POST',
-			url: $config.api_uri + '/Apiftontend/index',
-			data: {},
-		}).success(function (data) {
-			if (data.success) {
-				//.....
-			} else {
-				$mdToast.show(
-					$mdToast.simple()
-						.content(data.error_msg)
-						.hideDelay(2000)
-				);
-			}
-
-		})
-
-
-		$scope.loadMore = function () {
-			// $scope.scroll_switch = -1;
-			$scope.currentPage += 1
-			$http({
-				method: 'POST',
-				url: $config.api_uri + '/Apiftontend/index_loaddata',
-				data: {page:$scope.currentPage},
-			}).success(function (data) {
-				if (data.success) {
-					$scope.shop_list = data.shop_list
-				} else {
-					$mdToast.show(
-						$mdToast.simple()
-							.content(data.error_msg)
-							.hideDelay(2000)
-					);
-				}
-
-			})
+            })
 		}
+
+
+
+
 
 
 	});
