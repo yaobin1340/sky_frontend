@@ -7,6 +7,9 @@ angular
 		var $timeout = $injector.get('$timeout');
 		var $config = $injector.get('$config');
 		var $session = $injector.get('$session');
+		var $mdDialog = $injector.get('$mdDialog');
+        var $mdMedia = $injector.get('$mdMedia');
+        var $mdToast = $injector.get('$mdToast');
 
 		// var userId = $session.get('auth')._id
 
@@ -31,7 +34,16 @@ angular
                         url:$config.api_uri + '/Apiftontend/use_QQmap',
                         data:{lat:$scope.shops.lat,lng:$scope.shops.lng}
                     }).success(function (data) {
-                        console.log(data)
+                        if(data == -1){
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .content('获取地理信息失败')
+                                    .hideDelay(2000)
+                            );
+                        }else{
+                            $scope.shops.area_code = data;
+                            $scope.shops.busy = false;
+                        }
                     })
                 } else {
                     $mdToast.show(
