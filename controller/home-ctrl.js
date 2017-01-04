@@ -43,6 +43,7 @@ angular
                         }else{
                             $scope.shops.area_code = data;
                             $scope.shops.busy = false;
+                            $scope.shops.nextPage()
                         }
                     })
                 } else {
