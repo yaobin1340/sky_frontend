@@ -28,7 +28,8 @@ angular
                 if (data.success) {
                     $http({
                         method: 'GET',
-                        url: 'http://apis.map.qq.com/ws/geocoder/v1/?location='+$scope.shops.lat+','+$scope.shops.lng+'&get_poi=1&key=JFOBZ-HYWWW-T3XR3-OA5ZK-BYBP3-2JF2F',
+                        url:$config.api_uri + '/Apiftontend/use_QQmap'
+                        data:{lat:$scope.shops.lat,lng:$scope.shops.lng}
                     }).success(function (data) {
                         console.log(data)
                     })
