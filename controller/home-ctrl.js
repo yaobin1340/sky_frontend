@@ -28,7 +28,7 @@ angular
                 if (data.success) {
                     $http({
                         method: 'GET',
-                        url: 'http://apis.map.qq.com/ws/geocoder/v1/?location='+$scope.shops.lat+','+$scope.shops.lng+'&get_poi=1&key=STHBZ-YCG3O-52AWM-SPHZU-XGH53-HDBA3',
+                        url: 'http://apis.map.qq.com/ws/geocoder/v1/?location='+$scope.shops.lat+','+$scope.shops.lng+'&get_poi=1&key=JFOBZ-HYWWW-T3XR3-OA5ZK-BYBP3-2JF2F',
                     }).success(function (data) {
                         console.log(data)
                     })
