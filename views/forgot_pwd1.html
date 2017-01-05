@@ -1,0 +1,33 @@
+<!--<link rel="stylesheet" href="/assets/css/forgetpwd.css">-->
+<link rel="stylesheet" href="/assets/css/skyregister.css">
+<div class="register_one_header">
+    <span class="register_header_title">忘记密码</span>
+    <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
+</div>
+<div style="margin-top: 100px;">
+    <form  name="signUpForm">
+        <div class="am-form-group am-form-icon">
+            <i class="am-icon-lock" style="margin-left: 5%;"></i>
+            <input type="password" style="border-radius: 10px;width: 90%;margin: 0 auto;" name="password"
+                   ng-model="password"
+                   ng-class="{'error':signUpForm.password.$invalid && signUpForm.password.$touched}"
+                   ng-minlength="6"
+                   ng-maxlength="12"
+                   required
+                   class="am-form-field js-pattern-number am-form-mobile sky_register_border"
+                   placeholder="请输入新密码"/>
+        </div>
+        <div class="am-form-group am-form-icon">
+            <i class="am-icon-lock" style="margin-left: 5%;"></i>
+            <input type="password" style="border-radius: 10px;width: 90%;margin: 0 auto;" name="pwd"
+                   ng-model="pwd"
+                   ng-class="{'error':signUpForm.pwd.$invalid && signUpForm.pwd.$touched}"
+                   ng-minlength="6"
+                   ng-maxlength="12"
+                   required
+                   class="am-form-field js-pattern-number am-form-mobile sky_register_border"
+                   placeholder="请输入新密码"/>
+        </div>
+        <button style="width: 90%;margin: 0 auto;margin-top: 50px;" type="submit" class="am-btn am-btn-secondary am-btn-default am-btn-block am-btn-next" ng-disabled="signUpForm.$invalid">提交</button>
+    </form>
+</div>

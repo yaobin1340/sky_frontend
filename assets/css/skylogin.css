@@ -1,15 +1,26 @@
-@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+}
 .register_one_header{
-    width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;z-index: 222;
+    width: 100%;text-align: center;background: #01a2f2;color: #ffffff;
 }
 .register_header_title{
     text-align: center;line-height: 50px;font-size: 20px;font-family: '宋体';
 }
 .register_header_back{
-    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;
+    line-height: 50px;font-size: 20px;float: left;margin-left:5px ;color: #ffffff;
 }
-.am-slider-default .am-direction-nav a {
-    /*display: none;*/
+.sky_register_logo {
+    margin: 0 auto;
+    display: block;
+    margin-top: 70px;
+}
+.error{
+    border:1px solid red;
 }
 .login_all{
     width: 100%;
@@ -43,10 +54,4 @@
 }
 .login_others .login_others_news_user{
     float: right;margin-right: 8%;
-}
-.sky_register_logo {
-    margin: 0 auto;
-    display: block;
-    margin-top: 70px;
-
 }

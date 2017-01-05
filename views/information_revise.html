@@ -1,10 +1,5 @@
 <link rel="stylesheet" href="/assets/css/merchantssettled.css">
 <link rel="stylesheet" href="/assets/css/informationrevise.css">
-<style>
-    .body_all{
-        margin-top: 50px;padding-bottom: 30px;
-    }
-</style>
 <div class="register_one_header">
     <span class="register_header_title">账户管理</span>
     <a href="javascript:window.history.go(-1);"><span class="am-icon-chevron-left register_header_back"></span></a>
@@ -29,12 +24,12 @@
                     <div class="information_tel">您的号码：<span>{{user_info.mobile}}</span></div>
                 </div>
                 <div class="am-form-group">
-                    <select id="province_code" ng-model="province_code" ng-options="provinces.name for provinces in provinces_list track by provinces.code" ng-change="change_provinces()"></select>
-                    <select id="city_code" ng-model="city_code" ng-options="city.name for city in city_list track by city.code" ng-change="change_city()"></select>
-                    <select id="area_code" ng-model="area_code" ng-options="area.name for area in area_list track by area.code"></select>
+                    <select id="province_code" ng-model="province_code" ng-options="provinces.name for provinces in provinces_list track by provinces.code" ng-change="change_provinces()" required></select>
+                    <select id="city_code" ng-model="city_code" ng-options="city.name for city in city_list track by city.code" ng-change="change_city()" required></select>
+                    <select id="area_code" ng-model="area_code" ng-options="area.name for area in area_list track by area.code" required></select>
                 </div>
-                <div class="merchants_settled_shop_information_btn">
-                    <button type="button" class="am-btn am-btn-default am-btn-block login_form_btn" data-am-modal="{target: '#my-popup'}">修改密码</button>
+                <div class="information_revise_btn_confirm">
+                    <button ui-sref="modify_password" type="button" class="am-btn am-btn-danger am-btn-block login_form_btn">修改密码</button>
                 </div>
                 <div class="information_revise_btn_confirm">
                     <input id="save_btn" class="am-btn am-btn-secondary am-btn-block information_revise_btn_confirm_back" type="button" value="确认" ng-click="save_information_revise()">
@@ -43,34 +38,6 @@
                     <a ui-sref="main.user_center" class="am-btn am-btn-default am-btn-block information_revise_btn_confirm_back">返回</a>
                 </div>
             </form>
-            <div class="am-popup" id="my-popup">
-                <div class="am-popup-inner">
-                    <div class="am-popup-hd">
-                        <h4 class="am-popup-title">修改密码</h4>
-                        <span data-am-modal-close class="am-close" style="color: #3bb4f2;">&times;</span>
-                    </div>
-                    <div class="am-popup-bd information_revise_layer">
-                        <div class="am-g">
-                            <br class="am-u-lg-6 am-u-md-8 am-u-sm-centered"><br><br><br>
-                            <form id="edit_pwd_form" method="post" class="am-form " action="" data-am-validator>
-                                <div class="am-form-group am-form-icon">
-                                    <i class="am-icon-lock"></i>
-                                    <input type="password" id="pwd_pass"  name="password" class="am-form-field am-form-mobile" placeholder="请输入您的旧密码" required />
-                                </div>
-                                <div class="am-form-group am-form-icon">
-                                    <i class="am-icon-lock"></i>
-                                    <input type="password" id="pwd_new_one"  name="new_password" class="am-form-field am-form-mobile" placeholder="请输入新密码" required />
-                                </div>
-                                <div class="am-form-group am-form-icon">
-                                    <i class="am-icon-lock"></i>
-                                    <input type="password" id="pwd_new_two"  name="new_password2" class="am-form-field am-form-mobile" placeholder="请确认新密码" required />
-                                </div>
-                                <button id="edit_pwd_btn" type="button" class="am-btn am-btn-secondary am-btn-default am-btn-block am-btn-next">修改</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 <script type="text/javascript" src="/assets/js/localResizeIMG.js"></script>

@@ -6,6 +6,9 @@ body,h1,h2,h3,p,ul,ol,form,fieldset,figure{
 body{
     padding-bottom: 80px;
 }
+.body_all{
+    margin-top: 50px;
+}
 .register_one_header{
     width: 100%;text-align: center;background: #01a2f2;height: 50px; border-color: #01a2f2;position: fixed;top:0;z-index: 222;color: #ffffff;
 }
@@ -22,7 +25,10 @@ body{
     margin-left: 25%;
 }
 .login_form_btn{
-    background: #dc514c;border: 1px solid #ffffff;color: #ffffff;
+    border: 1px solid #ffffff;color: #ffffff;
+}
+.login_form_btn:active{
+    color: #ffffff;
 }
 .information_revise_btn_confirm{
     margin-top: 10px;
