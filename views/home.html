@@ -16,8 +16,8 @@
 						</div>
 						<div class="shop_index_position_provice_city_county">
 							<nav>
-								<ul ng-repeat="province in province_list">
-									<li>{{province.name}}</li>
+								<ul ng-repeat="item in province_city_area">
+									<li ng-click="getCityArea(item.code,getFlag)">{{item.name}}</li>
 								</ul>
 							</nav>
 						</div>

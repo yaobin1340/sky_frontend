@@ -22,6 +22,7 @@ angular
 		$scope.shops.lng = '';
 		$scope.isReady = false;
 		$scope.showProvince = false;
+		$scope.getFlag = 1;
 
 		$scope.getIndex = function(){
 		    $http({
@@ -47,13 +48,14 @@ angular
 
         $scope.get_province = function(){
             $scope.showProvince = !$scope.showProvince;
+            $scope.getFlag = 1;
             if($scope.showProvince == true){
                 $http({
                     method: 'POST',
                     url: $config.api_uri + '/Apiftontend/get_province',
                 }).success(function (data) {
                     if (data.success) {
-                        $scope.province_list = data.province_list;
+                        $scope.province_city_area = data.province_list;
                     } else {
                         $mdToast.show(
                             $mdToast.simple()
@@ -63,6 +65,57 @@ angular
                     }
                 })
             }
+
+        }
+
+        $scope.getCityArea = function(code,getFlag){
+            if(getFlag == 1){
+                $http({
+                    method: 'POST',
+                    url: $config.api_uri + '/Apiftontend/get_city',
+                    data:{province_code:code}
+                }).success(function (data) {
+                    if (data.success) {
+                        $scope.province_city_area = data.city_list;
+                    } else {
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .content(data.error_msg)
+                                .hideDelay(2000)
+                        );
+                    }
+                })
+                $scope.getFlag = 2;
+            }else if(getFlag == 2){
+                $http({
+                    method: 'POST',
+                    url: $config.api_uri + '/Apiftontend/get_area',
+                    data:{city_code:code}
+                }).success(function (data) {
+                    if (data.success) {
+                        $scope.province_city_area = data.area_list;
+                    } else {
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .content(data.error_msg)
+                                .hideDelay(2000)
+                        );
+                    }
+
+                })
+                $scope.getFlag = 3;
+            }else{
+                $scope.showProvince = !$scope.showProvince;
+                $scope.getFlag = 1;
+                $scope.shops.area_code = code;
+                $scope.area_name = code;
+                $scope.shops.items = []
+                $scope.shops.end = false;
+                $scope.shops.busy = false;
+                $scope.shops.nextPage()
+
+            }
+
 
         }
 
