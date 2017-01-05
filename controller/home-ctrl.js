@@ -44,6 +44,26 @@ angular
             })
 		}
 
+        $scope.get_province = function(){
+            $http({
+                method: 'POST',
+                url: $config.api_uri + '/Apiftontend/get_province',
+            }).success(function (data) {
+                if (data.success) {
+                    $scope.province_list = data.province_list;
+                } else {
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .content(data.error_msg)
+                            .hideDelay(2000)
+                    );
+                }
+            })
+        }
+
+
+
+
 
 
 
