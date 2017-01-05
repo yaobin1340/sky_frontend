@@ -25,5 +25,4 @@ angular
                     image: '/assets/images/banner1.jpg',
                     id: currIndex++
             });
-
     });

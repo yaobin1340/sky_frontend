@@ -170,15 +170,24 @@ angular
         templateUrl : 'views/signup1.html',
         controller : 'SigninSignupCtrl'
     };
-
     this.routes['forgot_pwd'] = {
         url : '/forgot_pwd',
         templateUrl : 'views/forgot_pwd.html',
         controller : 'SigninSignupCtrl'
     };
+    this.routes['forgot_pwd1'] = {
+        url : '/forgot_pwd1',
+        templateUrl : 'views/forgot_pwd1.html',
+        controller : 'SigninSignupCtrl'
+    };
     this.routes['information_revise'] = {
         url : '/information_revise',
         templateUrl : 'views/information_revise.html',
+        controller : 'InformationReviseCtrl'
+    };
+    this.routes['modify_password'] = {
+        url : '/modify_password',
+        templateUrl : 'views/modify_password.html',
         controller : 'InformationReviseCtrl'
     };
     this.routes['product_detail'] = {

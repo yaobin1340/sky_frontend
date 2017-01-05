@@ -14,7 +14,7 @@ angular
 		$scope.page = '-------'
 
 		$scope.signin = function () {
-			alert('ddddd');
+			// alert('ddddd');
 			$http({
 				method: 'POST',
 				url: $config.api_uri + '/Apiftontend/check_login',
@@ -171,18 +171,5 @@ angular
 					1000)
 			}
 		}
-
-		// $scope.testModals = function(ev){
-		//             $mdDialog.show({
-         //                    scope: $scope,
-         //                    preserveScope: true,
-         //                    templateUrl: 'views/modals/a.html',
-         //                    parent: angular.element(document.body),
-         //                    targetEvent: ev,
-         //                    clickOutsideToClose: true,
-         //                    fullscreen: true
-        //
-         //                });
-		// }
 
 	});
