@@ -24,7 +24,7 @@ angular
 		$scope.showProvince = false;
 		$scope.getFlag = 1;
 
-
+		window.wxConfig();
 		$scope.getIndex = function(){
 		    $http({
                 method: 'POST',
