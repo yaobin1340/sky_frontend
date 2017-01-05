@@ -47,7 +47,7 @@ angular
 
         $scope.get_province = function(){
             $scope.showProvince = !$scope.showProvince;
-            if($scope.showProvince == false){
+            if($scope.showProvince == true){
                 $http({
                     method: 'POST',
                     url: $config.api_uri + '/Apiftontend/get_province',
