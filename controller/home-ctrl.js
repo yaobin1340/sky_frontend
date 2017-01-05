@@ -23,6 +23,7 @@ angular
 		$scope.isReady = false;
 
 		$scope.getIndex = function(){
+		console.log('2')
 		    $http({
                 method: 'POST',
                 url: $config.api_uri + '/Apiftontend/index',
