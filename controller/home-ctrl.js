@@ -21,6 +21,7 @@ angular
 		$scope.shops.lat = '';
 		$scope.shops.lng = '';
 		$scope.isReady = false;
+		$scope.showProvince = false;
 
 		$scope.getIndex = function(){
 		    $http({
@@ -45,20 +46,24 @@ angular
 		}
 
         $scope.get_province = function(){
-            $http({
-                method: 'POST',
-                url: $config.api_uri + '/Apiftontend/get_province',
-            }).success(function (data) {
-                if (data.success) {
-                    $scope.province_list = data.province_list;
-                } else {
-                    $mdToast.show(
-                        $mdToast.simple()
-                            .content(data.error_msg)
-                            .hideDelay(2000)
-                    );
-                }
-            })
+            $scope.showProvince = !$scope.showProvince;
+            if($scope.showProvince == false){
+                $http({
+                    method: 'POST',
+                    url: $config.api_uri + '/Apiftontend/get_province',
+                }).success(function (data) {
+                    if (data.success) {
+                        $scope.province_list = data.province_list;
+                    } else {
+                        $mdToast.show(
+                            $mdToast.simple()
+                                .content(data.error_msg)
+                                .hideDelay(2000)
+                        );
+                    }
+                })
+            }
+
         }
 
 
