@@ -19,7 +19,7 @@ angular.module('ohapp').factory('Shops', function ($config, $http) {
 		$http({
 			method: 'POST',
 			url: $config.api_uri + '/Apiftontend/index_loaddata',
-			data: {page:this.page,lat:this.lat,lng:this.lng,area_code:this.area_code},
+			data: {page:this.page,lat:this.lat,lng:this.lng,area_code:this.area_code,shop_name:this.shop_name},
 		}).success(function (data) {
 			if (data.success) {
 				if(!data.shop_list.length){

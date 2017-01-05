@@ -3,11 +3,11 @@
 	<div class="shop_index_header_all">
 		<form class="am-topbar-form am-topbar-left am-form-inline" role="search">
 			<div class="am-form-group">
-				<input type="text" class="am-form-field am-input-sm" placeholder="搜索商家、品类或商家">
+				<input type="text" class="am-form-field am-input-sm" id="filter" placeholder="搜索商家、品类或商家" onkeydown="filterByEnter(event)">
 			</div>
 		</form>
 		<div id="doc-dropdown-justify">
-			<div class="am-dropdown" data-am-dropdown="{justify: '#doc-dropdown-justify'}">
+			<div class="am-dropdown">
 				<span ng-click="get_province()">{{area_name}} <span class="am-icon-caret-down"></span></span>
 				<div class="am-dropdown-content" ng-show="showProvince" style="display: block">
 					<div>
@@ -22,37 +22,7 @@
 							</nav>
 						</div>
 					</div>
-					<div id="address_city">
-						<div class="shop_index_position_provice_city_county">
-							<nav>
-								<ul >
-									<li onclick="address_city()">南京市</li>
-									<li>无锡市</li>
-									<li>徐州市</li>
-									<li>常州市</li>
-									<li>苏州市</li>
-									<li>南通市</li>
-									<li>连云港市</li>
-									<li>连云港市</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div id="address_county">
-						<div class="shop_index_position_provice_city_county">
-							<nav>
-								<ul >
-									<li onclick="address_county()">连云区</li>
-									<li>新浦区</li>
-									<li>海州区</li>
-									<li>赣榆县</li>
-									<li>东海区</li>
-									<li>灌云县</li>
-									<li>灌南县</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>

@@ -24,6 +24,7 @@ angular
 		$scope.showProvince = false;
 		$scope.getFlag = 1;
 
+
 		$scope.getIndex = function(){
 		    $http({
                 method: 'POST',
@@ -109,15 +110,25 @@ angular
                 $scope.getFlag = 1;
                 $scope.shops.area_code = code;
                 $scope.area_name = name;
-                $scope.shops.items = []
+                $scope.shops.items = [];
                 $scope.shops.end = false;
                 $scope.shops.busy = false;
-                $scope.shops.nextPage()
+                $scope.shops.nextPage();
 
             }
-
-
         }
+
+		window.filterByEnter=function(e){
+			if(e.keyCode==13){
+				$scope.$apply(function(){
+					$scope.shops.shop_name = document.getElementById('filter').value;
+					$scope.shops.items = [];
+					$scope.shops.end = false;
+					$scope.shops.busy = false;
+					$scope.shops.nextPage();
+				})
+			}
+		};
 
 
 
