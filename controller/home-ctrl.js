@@ -113,18 +113,20 @@ angular
                 $scope.shops.items = [];
                 $scope.shops.end = false;
                 $scope.shops.busy = false;
+                $scope.shops.page = 1;
                 $scope.shops.nextPage();
 
             }
         }
 
-		window.filterByEnter=function(e){
+		window.filterByEnter = function(e){
 			if(e.keyCode==13){
 				$scope.$apply(function(){
 					$scope.shops.shop_name = document.getElementById('filter').value;
 					$scope.shops.items = [];
 					$scope.shops.end = false;
 					$scope.shops.busy = false;
+					$scope.shops.page = 1;
 					$scope.shops.nextPage();
 				})
 			}
