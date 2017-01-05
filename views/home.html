@@ -74,16 +74,16 @@ $.getJSON('http://sky.jiangsuwxw.com/apiWeixin/buildWxData/home',function(data){
 
 wx.ready(function() {
 	wx.getLocation({
-    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
-    success: function (res) {
-    	var element = angular.element(document.getElementById("ohapp"));
-		var $scope = element.scope();
-		$scope.$$childTail.shops.lat = res.latitude;
-		$scope.$$childTail.shops.lng = res.longitude;
-		$scope.$apply();
-		$scope.$$childTail.getIndex();
-    }
-});
+		type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+		success: function (res) {
+			var element = angular.element(document.getElementById("ohapp"));
+			var $scope = element.scope();
+			$scope.$$childTail.shops.lat = res.latitude;
+			$scope.$$childTail.shops.lng = res.longitude;
+			$scope.$apply();
+			$scope.$$childTail.getIndex();
+		}
+	});
 })
 
 

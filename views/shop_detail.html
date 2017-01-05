@@ -24,7 +24,7 @@
                     <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
                 </p>
             </div>
-            <img class="shop_detail_img" src="/assets/images/gohere.png">
+            <img class="shop_detail_img" src="/assets/images/gohere.png" id="qu_map">
         </div>
         <div class="product_detail_2">
             <div class="product_detail_2_confirm">{{shop_detail.address}}</div>
@@ -57,7 +57,7 @@
                 <i><img src="/assets/images/productdetails_halfstar_icon.png"></i>
                 <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
                 <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
-                <span style="margin-left: 5px;font-size: 13px;">2016-12-09</span>
+                <span style="margin-left: 5px;font-size: 13px;" onclick="aaa()">2016-12-09</span>
             </p>
         </div>
         <div class="product_detail_describe">洪餐馆需要提前一个小时预约洪餐馆需要提前个小时预约洪餐馆需要提前</div>
@@ -69,3 +69,40 @@
         </div>
      </div>
 </div>
+
+<script>
+    function aaa(){
+	    var element = angular.element(document.getElementById("ohapp"));
+	    var $scope = element.scope();
+	    console.log($scope)
+    }
+
+
+	$.getJSON('http://sky.jiangsuwxw.com/apiWeixin/buildWxData/shop_detail',function(data){
+		wx.config({
+			debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			appId: data.wxappId, // 必填，公众号的唯一标识
+			timestamp: data.wxtimestamp, // 必填，生成签名的时间戳
+			nonceStr: data.wxnonceStr, // 必填，生成签名的随机串
+			signature: data.wxsignature,// 必填，签名，见附录1
+			jsApiList: ['openLocation'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+		});
+	});
+
+	wx.ready(function() {
+		$("#qu_map").click(function(){
+			var element = angular.element(document.getElementById("ohapp"));
+			var $scope = element.scope();
+			wx.openLocation({
+				latitude: $scope.$$childTail.shop_detail.lat, // 纬度，浮点数，范围为90 ~ -90
+			    longitude: $scope.$$childTail.shop_detail.lng, // 经度，浮点数，范围为180 ~ -180。
+			    name: $scope.$$childTail.shop_detail.shop_name, // 位置名
+				address: '$scope.$$childTail.shop_detail.address', // 地址详情说明
+				scale: 12, // 地图缩放级别,整形值,范围从1~28。默认为最大
+				infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+		    });
+		})
+	})
+
+
+</script>
