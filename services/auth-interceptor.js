@@ -1,6 +1,6 @@
 angular
 	.module('ohapp')
-	.factory('AuthInterceptor', function ($rootScope, $q, $session, $injector) {
+	.factory('AuthInterceptor', function ($rootScope, $q, $session, $injector,$location) {
 		return {
 			request: function (response) {
 				var token = $session.get('auth').token
@@ -11,6 +11,8 @@ angular
 				if (undefined !== token && jQuery.inArray(response.url, ignoreUrl) < 0) {
 					response.headers['Token'] = token
 				}
+
+				// alert($location.absUrl())
 
 				return response
 			},
