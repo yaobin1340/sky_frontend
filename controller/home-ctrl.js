@@ -23,13 +23,13 @@ angular
 		$scope.isReady = false;
 
 		$scope.getIndex = function(){
-		console.log('2')
 		    $http({
                 method: 'POST',
                 url: $config.api_uri + '/Apiftontend/index',
                 data: {lat:$scope.shops.lat,lng:$scope.shops.lng}
             }).success(function (data) {
                 if (data.success) {
+                    $scope.area_name = data.area_name;
                     $scope.shops.area_code = data.area_code;
                     $scope.shops.busy = false;
                     $scope.shops.nextPage()
