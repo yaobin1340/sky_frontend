@@ -68,7 +68,7 @@ angular
 
         }
 
-        $scope.getCityArea = function(code,getFlag){
+        $scope.getCityArea = function(code,getFlag,name){
             if(getFlag == 1){
                 $http({
                     method: 'POST',
@@ -107,7 +107,7 @@ angular
             }else{
                 $scope.showProvince = !$scope.showProvince;
                 $scope.getFlag = 1;
-                $scope.shops.area_code = code;
+                $scope.shops.area_code = name;
                 $scope.area_name = code;
                 $scope.shops.items = []
                 $scope.shops.end = false;
