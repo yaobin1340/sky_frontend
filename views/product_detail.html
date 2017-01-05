@@ -90,6 +90,15 @@
             </tr>
         </table>
     </div>
+
+
+    <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
+    <pre style="margin:15px 0;">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre><br><br><br><br><br><br>
+
+
+
+
+
     <script>
        function btn1() {
            $("#btn1").css("background","#f34e87");

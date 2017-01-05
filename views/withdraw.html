@@ -6,24 +6,29 @@
 <div style="width: 100%;padding-bottom: 80px;margin-top: 50px;">
     <table class="table1" border="0">
         <tr>
-            <td class="td1"><a ui-sref="main.withdraw_list" id="money_record">资金日志</a></td>
-            <td class="td1"><a ui-sref="main.money_log_list" id="cash_record">提现日志</a></td>
-            <td class="td1"><a ui-sref="main.withdraw" id="application_record">申请提现</a></td>
+            <td ui-sref="main.withdraw_list" class="td1" id="money_record">资金日志</td>
+            <td ui-sref="main.money_log_list" class="td1" id="cash_record">提现日志</td>
+            <td ui-sref="main.withdraw" class="td1" id="application_record">申请提现</td>
         </tr>
     </table>
     <div class="am-g row-one">
         <span class="withdraw_welcome_user">您好：zhou</span>
         <span class="">&nbsp;&nbsp;可提现余额：100元</span>
     </div>
-    <form class="am-form" data-am-validator action="/user/save_withdraw" method="post">
+    <form name="signUpForm">
         <div class="row-two">
             <div class="am-form-group am-form-icon ">
                 <i class="am-icon-cny"></i>
-                <input type="text" id="money"  name="money" class="am-form-field" placeholder="请输入提现金额 单笔最少100元" required style="height: 50px;border-radius: 10px;" />
+                <input style="height: 50px;border-radius: 10px;" type="text" id="money"  name="money"
+                       ng-model="money"
+                       ng-class="{'error':signUpForm.money.$invalid && signUpForm.money.$touched}"
+                       required
+                       class="am-form-field"
+                       placeholder="请输入提现金额 单笔最少100元" />
             </div>
         </div>
         <div class="am-form-group withdraw_bank_select">
-            <select>
+            <select name="bank" ng-model="bank">
                 <option value="">-请选择银行-</option>
                 <option value="">中国工商银行</option>
                 <option value="">中国农业银行</option>
@@ -40,16 +45,15 @@
                 <option value="">招商银行</option>
             </select>
         </div>
-        <!--<div class="row-two">-->
-        <!--<div class="am-form-group am-form-icon ">-->
-        <!--<i class="am-icon-cny"></i>-->
-        <!--<input type="number" class="am-form-field js-pattern-mobile" placeholder="请输入支付宝账号" required  style="height: 50px;border-radius: 10px;"/>-->
-        <!--</div>-->
-        <!--</div>-->
         <div class="row-two">
             <div class="am-form-group am-form-icon ">
                 <i class="am-icon-user"></i>
-                <input type="text" id="rel_name"  name="rel_name" class="am-form-field" value="" placeholder="请输入真实姓名" required  style="height: 50px;border-radius: 10px;"/>
+                <input style="height: 50px;border-radius: 10px;" type="text" id="rel_name"  name="rel_name"
+                       ng-model="rel_name"
+                       ng-class="{'error':signUpForm.rel_name.$invalid && signUpForm.rel_name.$touched}"
+                       required
+                       class="am-form-field"
+                       placeholder="请输入真实姓名" />
             </div>
         </div>
         <div class="am-g row-phone">
@@ -57,7 +61,8 @@
                 <div class="row-two">
                     <div class="am-form-group am-form-icon login_form_mobile">
                         <i class="am-icon-mobile-phone"></i>
-                        <input type="text" id="mobile"  name="mobile" class="am-form-field js-pattern-mobile" value="" disabled="disabled" required style="height: 50px;border-radius: 10px;" />
+                        <input type="text" id="mobile"  name="mobile"
+                               class="am-form-field js-pattern-mobile" value="15850293624" disabled="disabled" required style="height: 50px;border-radius: 10px;" />
                     </div>
                 </div>
             </div>
@@ -68,7 +73,13 @@
         <div class="row-two">
             <div class="am-form-group am-form-icon ">
                 <i class="am-icon-tag"></i>
-                <input type="number" id="yzm"  name="yzm" class="am-form-field js-pattern-mobile" placeholder="请输入验证码" required style="height: 50px;border-radius: 10px;"/>
+                <input style="height: 50px;border-radius: 10px;" type="number" id="yzm"  name="yzm"
+                       ng-model="yzm"
+                       ng-class="{'error':signUpForm.yzm.$invalid && signUpForm.yzm.$touched}"
+                       ng-minlength="6"
+                       ng-maxlength="6"
+                       class="am-form-field js-pattern-mobile"
+                       placeholder="请输入验证码" required />
             </div>
         </div>
     </form>
@@ -80,6 +91,6 @@
     </div>
     <div class="merchants_settled_shop_information_btn">
         <!--<button type="button" class="am-btn am-btn-default am-btn-block login_form_btn">您的余额不足</button>-->
-        <button type="button" class="am-btn am-btn-secondary am-btn-block login_form_btn">确认申请</button>
+        <button type="button" class="am-btn am-btn-secondary am-btn-block login_form_btn" ng-disabled="signUpForm.$invalid">确认申请</button>
     </div>
 </div>

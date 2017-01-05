@@ -29,7 +29,9 @@ html,body{
 #is_end{
     text-align: center;font-size: 12px;margin-top: 20px;
 }
-
+.title{
+    font-weight: bold;
+}
 footer{
     width: 100%;height: 60px; position:fixed; bottom:0;background-color: #ffffff;z-index: 55;border-top:1px solid #e9e9e9;color: #696969;
 }

@@ -18,13 +18,16 @@ html,body{
     width: 100%; height: 45px; border-collapse:collapse;color: #bfbfbf;
 }
 .table1 tr{
-    font-size: 14px;text-align: center;color: #999999;
+    font-size: 16px;text-align: center;color: #777777;
 }
 .td1{
     border-bottom:1px solid #e5e5e5;
 }
-.td1 a{
-    color: #777777;font-size: 16px;
+#application_record{
+    color:#00a0e9;
+}
+.error{
+    border: 1px solid red;
 }
 .row-one{
     width: 100%;
@@ -115,5 +118,5 @@ footer{
     width: 100%;
 }
 .withdraw_bank_select select{
-    width: 89%;height:50px;margin: 0 auto;margin-top: 10px;border-radius: 10px;
+    width: 89%;height:50px;margin: 0 auto;margin-top: 10px;border-radius: 10px;display: block;font-size: 16px;
 }
