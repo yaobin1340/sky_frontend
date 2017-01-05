@@ -26,7 +26,7 @@ angular
 		    $http({
                 method: 'POST',
                 url: $config.api_uri + '/Apiftontend/index',
-                data: {lat:$scope.shops.lat,lng:$scope.shops.lat}
+                data: {lat:$scope.shops.lat,lng:$scope.shops.lng}
             }).success(function (data) {
                 if (data.success) {
                     $scope.shops.area_code = data.area_code;
