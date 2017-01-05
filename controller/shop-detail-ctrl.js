@@ -20,7 +20,8 @@ angular
 			data: {shop_id:$stateParams.shop_id},
 		}).success(function (data) {
 			if (data.success) {
-				$scope.shop_detail = data.shop_detail
+				$scope.shop_detail = data.shop_detail;
+				window.wxConfig();
 			} else {
 				$mdToast.show(
 					$mdToast.simple()
