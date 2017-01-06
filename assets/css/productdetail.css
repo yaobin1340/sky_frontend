@@ -81,6 +81,9 @@ ul,ol{
     /*background: #f34e87;*/
     /*color: #ffffff;*/
 /*}*/
+.glyphicon{
+    color: #fc4d87;
+}
 #btn1{
     background: #f34e87;
     color: #ffffff;

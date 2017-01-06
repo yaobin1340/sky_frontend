@@ -19,14 +19,8 @@
         <span><span class="am-icon-check-circle-o commit"></span> 正品保证</span>
     </div>
     <div class="product_detail_3"></div>
-    <div class="am-list-item-text product_detail_4">
-        <p>
-            <i><img src="/assets/images/productdetails_star_icon.png"></i>
-            <i><img src="/assets/images/productdetails_star_icon.png"></i>
-            <i><img src="/assets/images/productdetails_halfstar_icon.png"></i>
-            <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
-            <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
-        </p>
+    <div class="product_detail_4">
+        <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
     </div>
     <div class="product_detail_5"></div>
     <div class="product_detail_6">
@@ -55,14 +49,8 @@
     </div>
     <!--<div class="product_detail_id">ID:123</div>-->
     <div class="product_detail_time">
-        <p>
-            <i><img src="/assets/images/productdetails_star_icon.png"></i>
-            <i><img src="/assets/images/productdetails_star_icon.png"></i>
-            <i><img src="/assets/images/productdetails_halfstar_icon.png"></i>
-            <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
-            <i><img src="/assets/images/productdetails_graystar_icon.png"></i>
+        <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
             <span style="margin-left: 5px;font-size: 13px;">2016-12-09</span>
-        </p>
     </div>
     <div class="product_detail_describe">洪餐馆需要提前一个小时预约洪餐馆需要提前个小时预约洪餐馆需要提前</div>
     <div style="margin-left: 15px;margin-top: 5px;">
@@ -90,15 +78,6 @@
             </tr>
         </table>
     </div>
-
-
-    <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
-    <pre style="margin:15px 0;">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre><br><br><br><br><br><br>
-
-
-
-
-
     <script>
        function btn1() {
            $("#btn1").css("background","#f34e87");
