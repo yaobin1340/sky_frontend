@@ -32,7 +32,12 @@
                 <span>向日葵</span>
             </td>
             <td class="td_border">
-                <a ui-sref="main.my_shop_center">
+                <a ui-sref="apply_shop" ng-if="shop_flag == 1">
+                    <span><img src="../../assets/images/personalcenter_icons_merchant.png"></span><br>
+                    <span>商家入驻</span>
+                </a>
+
+                <a ui-sref="main.my_shop_center"  ng-if="shop_flag == 2">
                     <span><img src="../../assets/images/personalcenter_icons_merchant.png"></span><br>
                     <span>我的商家</span>
                 </a>

@@ -25,7 +25,6 @@ angular
 		$scope.getFlag = 1;
 
 		$scope.$on('$viewContentLoaded', function() {
-			console.log($location.absUrl())
 			window.wxConfig();
 		});
 

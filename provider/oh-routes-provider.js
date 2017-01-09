@@ -233,6 +233,13 @@ angular
         controller : 'SigninSignupCtrl'
     };
 
+	this.routes['apply_shop'] = {
+		url: '/apply_shop',
+		title: 'apply_shop',
+		templateUrl: 'views/apply_shop.html',
+		controller: 'ApplyShopCtrl'
+	};
+
     this.$get = function()
     {
         return( this.routes );

@@ -23,6 +23,7 @@ angular
 			if(data.success){
 				$scope.user_info = data.user_info
 				$scope.sum_count = data.sum_count
+				$scope.shop_flag = data.shop_flag
 			}else{
 				$mdToast.show(
 					$mdToast.simple()

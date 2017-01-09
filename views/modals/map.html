@@ -1,0 +1,21 @@
+<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+<iframe class="am-popup-bd" id="mapPage" style="height:700px;width:100%;margin-top: -15px;"  frameborder=0 src="http://apis.map.qq.com/tools/locpicker?search=1&type=1&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp">
+
+</iframe>
+
+
+<script>
+
+
+	window.addEventListener('message', function(event) {
+		// 接收位置信息，用户选择确认位置点后选点组件会触发该事件，回传用户的位置信息
+		var loc = event.data;
+		if (loc && loc.module == 'locationPicker') {//防止其他应用也会向该页面post信息，需判断module是否为'locationPicker'
+			$("[name='lat']").val(loc.latlng.lat)
+			$("[name='lng']").val(loc.latlng.lng)
+			var element = angular.element(document.getElementById("ohapp"));
+			var $scope = element.scope();
+			$scope.closeDialog();
+		}
+	}, false);
+</script>
