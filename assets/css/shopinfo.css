@@ -138,7 +138,7 @@ img{
     margin-left: 2%;color: #00a0e9;margin-top: 5px;
 }
 .merchants_settled_shop_information_upload{
-    margin-top: 10px;border-bottom:1px solid #ccc;padding-bottom: 20px;
+    margin-top: 10px;border-bottom:1px solid #ccc;height: 82px;
 }
 .merchants_settled_shop_information_upload_1{
     width: 80px;height: 80px;float: left; margin-left: 2%;
@@ -147,13 +147,13 @@ img{
    width: 80px;height: 80px;
 }
 .merchants_settled_shop_information_upload_2{
-    padding-top: 8px;font-size: 15px;
+    padding-top: 50px;font-size: 15px;
 }
 .merchants_settled_shop_information_upload_3{
     padding-top: 10px;color:#c4c4c4;
 }
 .merchants_settled_shop_information_upload_4{
-    float: right;margin-right:10%;margin-top: -50px;
+    float: right;margin-right:10%;margin-top: -70px;
 }
 .merchants_settled_shop_information_btn{
     margin-top: 20px;
