@@ -153,6 +153,13 @@ angular
         templateUrl: 'views/cashier_desk.html',
         controller: 'CashierDeskCtrl'
     };
+    this.routes[ 'main.product_reviews' ] =
+    {
+        url: '^/product_reviews',
+        title: 'product_reviews',
+        templateUrl: 'views/product_reviews.html',
+        controller: 'ProductReviewsCtrl'
+    };
 
     this.routes['signin'] = {
         url : '/signin',

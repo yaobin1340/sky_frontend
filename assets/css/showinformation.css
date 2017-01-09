@@ -30,14 +30,16 @@ html{
     width: 75%;height: 300px;margin:0 auto;margin-top: 20px;background: rgba(255, 255, 255, 0.5);font-size: 15px;
 }
 .show_information_card_1{
-    width: 100%;height: 100px;text-align: center;
+    width: 100%;height: 100px;text-align: center;border-bottom: 1px dashed #c1bfbf;
 }
 .show_information_card_1 .show_information_card_title{
-    padding-top: 20px;
+    padding-top: 25px;font-size: 16px;color: #595757;
 }
-
+.show_information_card_1 .show_information_card_money{
+    padding-top: 5px;font-size: 16px;
+}
 .show_information_card_1 .show_information_card_refresh , .show_information_card_2 .show_information_card_date , .show_information_card_1 .show_information_card_money{
-    color: #01a2f2;
+    color: #01a2f2;font-size: 16px;
 }
 .show_information_card_1 .show_information_card_date{
     color: #01a2f2;
@@ -57,16 +59,19 @@ html{
     padding-left: 18%;color: #ffffff;
 }
 .show_information_card_2{
-    width: 100%;text-align: center;height: 100px;
+    width: 100%;text-align: center;height: 100px;border-bottom: 1px dashed #f7e288;
 }
 .show_information_card_2 .tr1{
     width: 30%;
 }
 .show_information_card_2 .td1{
-    width: 30%;color: #f7e288;border-radius: 10px;color: #01a2f2;
+    width: 30%;color: #f7e288;border-radius: 10px;color: #01a2f2;border-right: 1px dashed #f7e288;
 }
 .show_information_card_2 .td2{
     width:70%;text-align: center;
+}
+.sky_show_information_shuju{
+    color:#595757;
 }
 .show_information_card_2 .td2 img{
     width: 18px;height: 18px;margin: 0 auto;
@@ -88,6 +93,9 @@ html{
 }
 .show_information_card_4 tr{
     height: 35px;
+}
+.show_information_card_4 td{
+    color:#595757;
 }
 
 footer{
