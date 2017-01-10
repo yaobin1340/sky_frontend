@@ -5,18 +5,22 @@
 </div>
 <div class="sky_my_income">
     <table class="table1" border="0">
-        <tr>
+        <thead>
+        <tr >
             <td class="td1 title" style="width: 20%;">金额</td>
             <td class="td1 title" style="width: 42%;">来源</td>
             <td class="td1 title" style="width: 38%;">日期</td>
         </tr>
-        <tr>
-            <td class="td1">10000元</td>
-            <td class="td1">来源来源来源来源来源来源来源</td>
-            <td class="td1">2016-10-10 12:00</td>
+        </thead>
+        <tbody infinite-scroll='myincome.nextPage()' infinite-scroll-disabled='myincome.busy' infinite-scroll-distance='1'>
+        <tr ng-repeat="item in myincome.items">
+            <td class="td1">{{item.money/100}}</td>
+            <td class="td1">{{item.remark}}</td>
+            <td class="td1">{{item.cdate}}</td>
         </tr>
+        </tbody>
     </table>
-    <p id="is_end">已到最后一页</p>
+    <p  ng-show='myincome.end' id="is_end">已到最后一页</p>
     <!--<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">-->
         <!--<div class="am-modal-dialog">-->
             <!--<div class="am-modal-hd">正在加载...</div>-->
