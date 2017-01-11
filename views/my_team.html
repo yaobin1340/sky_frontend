@@ -26,12 +26,12 @@
         </tr>
         </thead>
         <tbody infinite-scroll='myteam.nextPage()' infinite-scroll-disabled='myteam.busy' infinite-scroll-distance='1'>
-        <tr ng-repeat="item in myincome.items">
+        <tr ng-repeat="item in myteam.items">
             <td class="td2">{{item.rel_name}}</td>
             <td class="td2">{{item.mobile}}</td>
             <td class="td2">{{item.team_total}}</td>
         </tr>
         </tbody>
     </table>
-    <p id="is_end">已到最后一页</p>
+    <p id="is_end" ng-show='myteam.end'>已到最后一页</p>
 </div>

@@ -94,3 +94,17 @@ footer{
 .footer_span_2{
     font-size: 15px; font-family: '宋体';color: #808080;
 }
+
+.nav>li>a {
+    padding: 10px 22px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background:#FFFFFF;
+    color: #3ab5f3;
+}
+li{
+    font-size: 16px;
+}
+a{
+    color:#555;
+}

@@ -18,84 +18,24 @@
         </tr>
     </table>
     <table class="table2" border="0" style="">
+        <thead>
         <tr class="my_team_title">
             <td class="td3">商家名称</td>
             <td class="td3">营业额</td>
             <td class="td3">类别</td>
             <td class="td3">推荐者</td>
         </tr>
-        <tr class="my_team_title_content">
+        </thead>
+        <tbody infinite-scroll='myshopone.nextPage()' infinite-scroll-disabled='myshopone.busy' infinite-scroll-distance='1'>
+        <tr ng-repeat="item in myshopone.items" class="my_team_title_content">
             <td class="td3">
-                <div>商家名称商家名称商家名称</div>
+                <div>{{item.shop_name}}</div>
             </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
+            <td class="td3">{{item.total}}</td>
+            <td class="td3">{{item.name}}</td>
+            <td class="td3">{{item.rel_name}}</td>
         </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
-        <tr class="my_team_title_content">
-            <td class="td3">
-                <div>商家名称商家名称商家名称</div>
-            </td>
-            <td class="td3">￥1234</td>
-            <td class="td3">类别</td>
-            <td class="td3">姚斌</td>
-        </tr>
+        </tbody>
     </table>
-    <p id="is_end">已到最后一页</p>
+    <p ng-show='myshopone.end' id="is_end">已到最后一页</p>
 </div>

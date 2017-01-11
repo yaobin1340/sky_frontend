@@ -3,7 +3,7 @@
  */
 angular
     .module( 'ohapp' )
-    .controller( 'MyTeamCtrl', function MyTeamCtrl( $scope, $injector,Myteam ) {
+    .controller( 'MyTeamCtrl', function MyTeamCtrl( $scope, $injector,Myteam,Myshopone,Myshoptwo ) {
         var $http = $injector.get( '$http' );
         var $location = $injector.get('$location');
         var $state = $injector.get( '$state' );
@@ -14,5 +14,7 @@ angular
             $scope.currentPage = 0;
             $scope.scroll_switch = 1;
             $scope.myteam = new Myteam();
+            $scope.myshopone = new Myshopone();
+            $scope.myshoptwo = new Myshoptwo();
 
     });
