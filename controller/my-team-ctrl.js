@@ -11,10 +11,10 @@ angular
         var $config = $injector.get( '$config' );
         var $session = $injector.get('$session');
 
-            $scope.currentPage = 0;
-            $scope.scroll_switch = 1;
-            $scope.myteam = new Myteam();
-            $scope.myshopone = new Myshopone();
-            $scope.myshoptwo = new Myshoptwo();
+        $scope.currentPage = 0;
+        $scope.scroll_switch = 1;
+        $scope.myteam = new Myteam();
+        $scope.myshopone = new Myshopone();
+        $scope.myshoptwo = new Myshoptwo();
 
     });

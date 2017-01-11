@@ -42,31 +42,20 @@
         </tr>
     </table>
     <table class="am-table">
+        <thead>
         <tr>
             <th>向日葵</th>
             <th>已激励</th>
             <th>日期</th>
         </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
+        </thead>
+        <tbody infinite-scroll='shopheart.nextPage(1)' infinite-scroll-disabled='shopheart.busy' infinite-scroll-distance='1'>
+        <tr ng-repeat="item in shopheart.items">
+            <td>{{item.status}}</td>
+            <td>{{item.return_integral}}</td>
+            <td>{{item.cdate}}</td>
         </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
+        </tbody>
     </table>
     <p id="is_end">已到最后一页</p>
 </div>

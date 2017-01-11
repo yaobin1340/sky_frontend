@@ -42,86 +42,20 @@
         </tr>
     </table>
     <table class="am-table">
+        <thead>
         <tr>
             <th>向日葵</th>
             <th>已激励</th>
             <th>日期</th>
         </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
+        </thead>
+        <tbody infinite-scroll='shopheartone.nextPage(2)' infinite-scroll-disabled='shopheartone.busy' infinite-scroll-distance='1'>
+        <tr ng-repeat="item in shopheartone.items">
+            <td>{{item.status}}</td>
+            <td>{{item.return_integral}}</td>
+            <td>{{item.cdate}}</td>
         </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
+        </tbody>
     </table>
-
-    <!--<uib-tabset type="pills">-->
-        <!--<uib-tab heading="6%激励">-->
-            <!--<table class="am-table">-->
-                <!--<tr>-->
-                    <!--<th>向日葵</th>-->
-                    <!--<th>已激励</th>-->
-                    <!--<th>日期</th>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-            <!--</table>-->
-        <!--</uib-tab>-->
-        <!--<uib-tab heading="12%激励">-->
-            <!--<table class="am-table">-->
-                <!--<tr>-->
-                    <!--<th>向日葵</th>-->
-                    <!--<th>已激励</th>-->
-                    <!--<th>日期</th>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-            <!--</table>-->
-        <!--</uib-tab>-->
-        <!--<uib-tab heading="24%激励">-->
-            <!--<table class="am-table">-->
-                <!--<tr>-->
-                    <!--<th>向日葵</th>-->
-                    <!--<th>已激励</th>-->
-                    <!--<th>日期</th>-->
-                <!--</tr>-->
-                <!--<tr>-->
-                    <!--<td>154</td>-->
-                    <!--<td>36</td>-->
-                    <!--<td>2016-10-10 12:00</td>-->
-                <!--</tr>-->
-            <!--</table>-->
-        <!--</uib-tab>-->
-    <!--</uib-tabset>-->
     <p id="is_end">已到最后一页</p>
 </div>
