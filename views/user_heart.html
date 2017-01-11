@@ -41,60 +41,20 @@
         </tr>
     </table>
     <table class="am-table">
+        <thead>
         <tr>
             <th>向日葵</th>
             <th>已激励</th>
             <th>日期</th>
         </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
+        </thead>
+        <tbody infinite-scroll='userheart.nextPage(1)' infinite-scroll-disabled='userheart.busy' infinite-scroll-distance='1'>
+        <tr ng-repeat="item in userheart.items">
+            <td>{{item.status}}</td>
+            <td>{{item.return_integral}}</td>
+            <td>{{item.cdate}}</td>
         </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
-        <tr>
-            <td>154</td>
-            <td>36</td>
-            <td>2016-10-10 12:00</td>
-        </tr>
+        </tbody>
     </table>
     <p id="is_end">已到最后一页</p>
 </div>
-<script>
-    $(function () {
-        $("#title_6").click();
-    })
-    function heart_6() {
-        $("#heart_6").css("display","block");
-        $("#heart_12").css("display","none");
-        $("#heart_24").css("display","none");
-        $("#title_6").css("color","#3ab5f3");
-        $("#title_12").css("color","#7c7c7c");
-        $("#title_24").css("color","#7c7c7c");
-    }
-    function heart_12() {
-        $("#heart_6").css("display","none");
-        $("#heart_12").css("display","block");
-        $("#heart_24").css("display","none");
-        $("#title_6").css("color","#7c7c7c");
-        $("#title_12").css("color","#3ab5f3");
-        $("#title_24").css("color","#7c7c7c");
-    }
-    function heart_24() {
-        $("#heart_6").css("display","none");
-        $("#heart_12").css("display","none");
-        $("#heart_24").css("display","block");
-        $("#title_6").css("color","#7c7c7c");
-        $("#title_12").css("color","#7c7c7c");
-        $("#title_24").css("color","#3ab5f3");
-    }
-</script>

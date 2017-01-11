@@ -3,7 +3,7 @@
  */
 angular
     .module( 'ohapp' )
-    .controller( 'UserHeartCtrl', function UserHeartCtrl( $scope, $injector,Shopheart,Shopheartone,Shophearttwo) {
+    .controller( 'UserHeartCtrl', function UserHeartCtrl( $scope, $injector,Shopheart,Shopheartone,Shophearttwo,Userheart,Userheartone,Userhearttwo) {
         var $http = $injector.get( '$http' );
         var $location = $injector.get('$location');
         var $state = $injector.get( '$state' );
@@ -11,11 +11,14 @@ angular
         var $config = $injector.get( '$config' );
         var $session = $injector.get('$session');
 
-            $scope.currentPage = 0;
-            $scope.scroll_switch = 1;
-            $scope.shopheart = new Shopheart();
-            $scope.shopheartone = new Shopheartone();
-            $scope.shophearttwo = new Shophearttwo();
+        $scope.currentPage = 0;
+        $scope.scroll_switch = 1;
+        $scope.shopheart = new Shopheart();
+        $scope.shopheartone = new Shopheartone();
+        $scope.shophearttwo = new Shophearttwo();
+        $scope.userheart = new Userheart();
+        $scope.userheartone = new Userheartone();
+        $scope.userhearttwo = new Userhearttwo();
 
     });
 
