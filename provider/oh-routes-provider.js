@@ -90,6 +90,20 @@ angular
         templateUrl: 'views/user_heart.html',
         controller: 'UserHeartCtrl'
     };
+    this.routes[ 'main.user_heart_1' ] =
+    {
+        url: '^/user_heart_1',
+        title: 'user_heart_1',
+        templateUrl: 'views/user_heart_1.html',
+        controller: 'UserHeartCtrl'
+    };
+    this.routes[ 'main.user_heart_2' ] =
+    {
+        url: '^/user_heart_2',
+        title: 'user_heart_2',
+        templateUrl: 'views/user_heart_2.html',
+        controller: 'UserHeartCtrl'
+    };
     this.routes[ 'main.shop_heart' ] =
     {
         url: '^/shop_heart',
@@ -97,6 +111,21 @@ angular
         templateUrl: 'views/shop_heart.html',
         controller: 'UserHeartCtrl'
     };
+    this.routes[ 'main.shop_heart_1' ] =
+    {
+        url: '^/shop_heart_1',
+        title: 'shop_heart_1',
+        templateUrl: 'views/shop_heart_1.html',
+        controller: 'UserHeartCtrl'
+    };
+    this.routes[ 'main.shop_heart_2' ] =
+    {
+        url: '^/shop_heart_2',
+        title: 'shop_heart_2',
+        templateUrl: 'views/shop_heart_2.html',
+        controller: 'UserHeartCtrl'
+    };
+
     this.routes[ 'main.my_team' ] =
     {
         url: '^/my_team',
