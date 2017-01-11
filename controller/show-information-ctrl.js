@@ -1,6 +1,3 @@
-/**
- * Created by zhouxiaoting on 2016/12/22.
- */
 angular
     .module('ohapp')
     .controller('ShowInformationCtrl', function ShowInformationCtrl($scope, $injector,$stateParams) {
@@ -30,5 +27,8 @@ angular
                     image: '/assets/images/banner1.jpg',
                     id: currIndex++
             });
+
+
+
 
     });
