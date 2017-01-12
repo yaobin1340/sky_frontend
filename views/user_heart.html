@@ -50,11 +50,11 @@
         </thead>
         <tbody infinite-scroll='userheart.nextPage(1)' infinite-scroll-disabled='userheart.busy' infinite-scroll-distance='1'>
         <tr ng-repeat="item in userheart.items">
-            <td>{{item.status}}</td>
+            <td>55</td>
             <td>{{item.return_integral}}</td>
             <td>{{item.cdate}}</td>
         </tr>
         </tbody>
     </table>
-    <p ng-show='myteam.end' id="is_end">已到最后一页</p>
+    <p ng-show='userheart.end' id="is_end">已到最后一页</p>
 </div>
