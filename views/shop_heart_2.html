@@ -50,11 +50,11 @@
         </tr>
         </thead>
         <tbody infinite-scroll='shophearttwo.nextPage(3)' infinite-scroll-disabled='shophearttwo.busy' infinite-scroll-distance='1'>
-        <tr ng-repeat="item in shophearttwo.items">
-            <td>{{item.status}}</td>
-            <td>{{item.return_integral}}</td>
-            <td>{{item.cdate}}</td>
-        </tr>
+            <tr ng-repeat="item in shophearttwo.items">
+                <td>{{item.status}}</td>
+                <td>{{item.return_integral}}</td>
+                <td>{{item.cdate}}</td>
+            </tr>
         </tbody>
     </table>
     <p ng-show='myteam.end' id="is_end">已到最后一页</p>
