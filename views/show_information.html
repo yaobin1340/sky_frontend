@@ -9,16 +9,16 @@
                 <div class="test show_information_card_div_all">
                     <div class="show_information_card_1">
                         <div class="show_information_card_title">待捐款</div>
-                        <div class="show_information_card_money">1000</div>
+                        <div class="show_information_card_money">{{jukuan/100}}</div>
                     </div>
                     <div class="show_information_card_1">
                         <div class="show_information_card_title">上个捐款日捐赠</div>
-                        <div class="show_information_card_date">2015-10-10</div>
-                        <div class="show_information_card_money">1000</div>
+                        <div class="show_information_card_date">{{jukuaned}}</div>
+                        <div class="show_information_card_money">缺值</div>
                     </div>
                     <div class="show_information_card_1">
                         <div class="show_information_card_title">累计捐赠</div>
-                        <div class="show_information_card_money">10000</div>
+                        <div class="show_information_card_money">{{jukuanes/100}}</div>
                     </div>
                 </div>
           </div>
@@ -26,7 +26,7 @@
               <div class="show_information_lunbo_header_img_shuju2">
                   <div class="show_information_lunbo_header_card_two_user">联盟客户</div>
                   <div class="show_information_lunbo_header_card_two_sundata">向日葵日值</div>
-                  <div class="show_information_lunbo_header_card_two_lovetime">2015-10-10</div>
+                  <div class="show_information_lunbo_header_card_two_lovetime">{{data.date}}</div>
               </div>
               <div class="test show_information_card_div_all">
                    <table class="show_information_card_2" border="0">
@@ -36,7 +36,7 @@
                                   <span>6系列</span>
                              </td>
                              <td class="td2">
-                                 <span class="sky_show_information_shuju">1234</span>
+                                 <span class="sky_show_information_shuju">{{data.ax6_price/100}}</span>
                                  <img src="/assets/images/zhongzi.png">
                                   <!--<span style="float: left;margin: 0 auto;">/</span>-->
                                  <span style="color: #f7e288;font-size: 20px;">/</span>
@@ -48,10 +48,10 @@
                       <tr class="tr1">
                           <td class="td1">
                               <span class="am-icon-star"><span class="am-icon-star"></span></span><br>
-                              <span>6系列</span>
+                              <span>12系列</span>
                           </td>
                           <td class="td2">
-                              <span class="sky_show_information_shuju">1234</span>
+                              <span class="sky_show_information_shuju">{{data.ax12_price/100}}</span>
                               <img src="/assets/images/zhongzi.png">
                               <span style="color: #f7e288;font-size: 20px;">/</span>
                               <img src="/assets/images/sunflowerlogo.png">
@@ -65,7 +65,7 @@
                               <span>24系列</span>
                           </td>
                           <td class="td2">
-                              <span class="sky_show_information_shuju">1234</span>
+                              <span class="sky_show_information_shuju">{{data.ax24_price/100}}</span>
                               <img src="/assets/images/zhongzi.png">
                               <span style="color: #f7e288;font-size: 20px;">/</span>
                               <img src="/assets/images/sunflowerlogo.png">
@@ -78,7 +78,7 @@
             <div class="show_information_lunbo_header_img_shuju2">
                 <div class="show_information_lunbo_header_card_two_user">联盟商家</div>
                 <div class="show_information_lunbo_header_card_two_sundata">向日葵日值</div>
-                <div class="show_information_lunbo_header_card_two_lovetime">2015-10-10</div>
+                <div class="show_information_lunbo_header_card_two_lovetime">{{data.date}}</div>
             </div>
             <div class="test show_information_card_div_all">
                 <table class="show_information_card_2" border="0">
@@ -88,7 +88,7 @@
                             <span>6系列</span>
                         </td>
                         <td class="td2">
-                            <span class="sky_show_information_shuju">1234</span>
+                            <span class="sky_show_information_shuju">{{data.shop_ax6_price/100}}</span>
                             <img src="/assets/images/zhongzi.png">
                             <span style="color: #f7e288;font-size: 20px;">/</span>
                             <img src="/assets/images/sunflowerlogo.png">
@@ -99,10 +99,10 @@
                     <tr class="tr1">
                         <td class="td1">
                             <span class="am-icon-star"><span class="am-icon-star"></span></span><br>
-                            <span>6系列</span>
+                            <span>12系列</span>
                         </td>
                         <td class="td2">
-                            <span class="sky_show_information_shuju">1234</span>
+                            <span class="sky_show_information_shuju">{{data.shop_ax12_price/100}}</span>
                             <img src="/assets/images/zhongzi.png">
                             <span style="color: #f7e288;font-size: 20px;">/</span>
                             <img src="/assets/images/sunflowerlogo.png">
@@ -116,7 +116,7 @@
                             <span>24系列</span>
                         </td>
                         <td class="td2">
-                            <span class="sky_show_information_shuju">1234</span>
+                            <span class="sky_show_information_shuju">{{data.shop_ax24_price/100}}</span>
                             <img src="/assets/images/zhongzi.png">
                             <span style="color: #f7e288;font-size: 20px;">/</span>
                             <img src="/assets/images/sunflowerlogo.png">

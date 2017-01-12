@@ -29,4 +29,36 @@ angular
                     id: currIndex++
             });
 
+        $http({
+            method: 'POST',
+            url: $config.api_uri + '/Apiftontend/show_information',
+            data: {},
+        }).success(function (data) {
+            if (data.success) {
+                $scope.jukuan = data.jukuan.djk.total;
+                $scope.jukuaned =data.jukuan.zjjk.date;
+                $scope.jukuanes = data.jukuan.zjk.total;
+                $scope.data = data.data;
+                $scope.ysday = data.ysday.per6.total;
+                console.log($scope.ysday)
+                // $scope.date = data.data.date;
+                // $scope.price6 = data.data.ax6_price;
+                // $scope.price12 = data.data.ax12_price;
+                // $scope.price24 = data.data.ax24_price;
+                // console.log($scope.price6)
+                // console.log($scope.date)
+                // $scope.ysday = data.ysday;
+                // $scope.phangcity = data.phangcity;
+                // $scope.lminfo = data.lminfo;
+
+            } else {
+                $mdToast.show(
+                    $mdToast.simple()
+                        .content(data.error_msg)
+                        .hideDelay(2000)
+                );
+            }
+
+        })
+
     });
