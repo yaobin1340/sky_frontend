@@ -39,8 +39,14 @@ angular
                 $scope.jukuaned =data.jukuan.zjjk.date;
                 $scope.jukuanes = data.jukuan.zjk.total;
                 $scope.data = data.data;
+                $scope.phangcity = data.phangcity;
+                $scope.lminfo = data.lminfo.lm_total.alltotal;
+                $scope.lminfousers = data.lminfo.lm_users.num;
+                $scope.lminfoshops = data.lminfo.lm_shops.num;
                 $scope.ysday = data.ysday.per6.total;
                 console.log($scope.ysday)
+                // $scope.ysdaya = data.ysday.per6.total;
+                // console.log($scope.ysdaya)
                 // $scope.date = data.data.date;
                 // $scope.price6 = data.data.ax6_price;
                 // $scope.price12 = data.data.ax12_price;

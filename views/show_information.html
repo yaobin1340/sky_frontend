@@ -131,37 +131,9 @@
             </div>
             <div class="test show_information_card_div_all">
                 <table class="show_information_card_4" border="0">
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
-                    </tr>
-                    <tr>
-                        <td>江苏省-南通市</td>
-                        <td>123456.00万元</td>
+                    <tr ng-repeat="item in phangcity">
+                        <td>{{item.p_name}}-{{item.c_name}}</td>
+                        <td>{{item.alltotal/100}}元</td>
                     </tr>
                 </table>
             </div>
@@ -174,16 +146,16 @@
             <div class="test show_information_card_div_all">
                 <div class="show_information_card_1">
                     <div class="show_information_card_title">联盟消费总额</div>
-                    <div class="show_information_card_money">1000</div>
+                    <div class="show_information_card_money">{{lminfo/100}}元</div>
                 </div>
                 <div class="show_information_card_1">
                     <div class="show_information_card_title">联盟消费特使人数</div>
-                    <div class="show_information_card_date">2015-10-10</div>
-                    <div class="show_information_card_money">1000</div>
+                    <div class="show_information_card_date">{{data.date}}</div>
+                    <div class="show_information_card_money">{{lminfousers}}</div>
                 </div>
                 <div class="show_information_card_1">
                     <div class="show_information_card_title">联盟商家</div>
-                    <div class="show_information_card_money">10000</div>
+                    <div class="show_information_card_money">{{lminfoshops}}</div>
                 </div>
             </div>
         </div>
@@ -195,15 +167,15 @@
             <div class="test show_information_card_div_all">
                 <div class="show_information_card_1">
                     <div class="show_information_card_title">6系列</div>
-                    <div class="show_information_card_money">1000</div>
+                    <div class="show_information_card_money">0</div>
                 </div>
                 <div class="show_information_card_1">
                     <div class="show_information_card_title">12系列</div>
-                    <div class="show_information_card_date">10</div>
+                    <div class="show_information_card_date">0</div>
                 </div>
                 <div class="show_information_card_1">
                     <div class="show_information_card_title">24系列</div>
-                    <div class="show_information_card_money">10000</div>
+                    <div class="show_information_card_money">0</div>
                 </div>
             </div>
         </div>
