@@ -3,7 +3,7 @@
  */
 angular
     .module( 'ohapp' )
-    .controller( 'ShopOrderManageCtrl', function ShopOrderManageCtrl( $scope, $injector ) {
+    .controller( 'ShopOrderManageCtrl', function ShopOrderManageCtrl( $scope, $injector) {
         var $http = $injector.get( '$http' );
         var $location = $injector.get('$location');
         var $state = $injector.get( '$state' );
@@ -12,6 +12,9 @@ angular
         var $session = $injector.get('$session');
 
         // var userId = $session.get('auth')._id
+        // $scope.currentPage = 0;
+        // $scope.scroll_switch = 1;
+        // $scope.shopordermanage = new Shopordermanage();
 
 
 

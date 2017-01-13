@@ -14,19 +14,21 @@
     <table class="table2" border="0">
         <thead>
         <tr>
-            <td class="td2 title">金额变化</td>
-            <td class="td2 title">日期</td>
-            <td class="td2 title">状态</td>
+            <td class="td2 title" style="width: 10%;">金额变化</td>
+            <td class="td2 title" style="width: 45%;">日期</td>
+            <td class="td2 title" style="width: 45%;">状态</td>
         </tr>
         </thead>
         <tbody infinite-scroll='withdrawlist.nextPage()' infinite-scroll-disabled='withdrawlist.busy' infinite-scroll-distance='1'>
         <tr ng-repeat="item in withdrawlist.items">
-            <td class="td2">+{{item.money}}</td>
-            <td class="td2" style="width: 40%;">{{item.cdate}}</td>
-            <td class="td2" style="color: #00a0e9;">{{item.status}}</td>
+            <td class="td2">{{item.money/100}}</td>
+            <td class="td2">{{item.cdate}}</td>
+            <td class="td2" style="color: red;" ng-if="item.status == 1">待审核</td>
+            <td class="td2" style="color: #00a0e9;" ng-if="item.status == 2">审核通过</td>
+            <td class="td2" style="color:red;" ng-if="item.status == -1">拒绝</td>
         </tr>
         </tbody>
     </table>
 
-    <p id="is_end">已到最后一页</p>
+    <p ng-show='withdrawlist.end' id="is_end">已到最后一页</p>
 </div>
