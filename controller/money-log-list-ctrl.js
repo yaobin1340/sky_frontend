@@ -3,7 +3,7 @@
  */
 angular
     .module( 'ohapp' )
-    .controller( 'MoneyLogListCtrl', function MoneyLogListCtrl( $scope, $injector ) {
+    .controller( 'MoneyLogListCtrl', function MoneyLogListCtrl( $scope, $injector,Moneyloglist) {
         var $http = $injector.get( '$http' );
         var $location = $injector.get('$location');
         var $state = $injector.get( '$state' );
@@ -15,7 +15,8 @@ angular
         var $mdToast = $injector.get('$mdToast')
 
         // var userId = $session.get('auth')._id
-            $scope.testModals = function(ev){
+            $scope.testModals = function(ev,remark){
+                $scope.remark = remark;
                     $mdDialog.show({
                             scope: $scope,
                             preserveScope: true,
@@ -27,6 +28,9 @@ angular
 
                     });
             }
+            $scope.currentPage = 0;
+            $scope.scroll_switch = 1;
+            $scope.moneyloglist = new Moneyloglist();
 
 
     });

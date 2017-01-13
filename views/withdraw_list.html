@@ -12,26 +12,20 @@
         </tr>
     </table>
     <table class="table2" border="0">
+        <thead>
         <tr>
             <td class="td2 title">金额变化</td>
             <td class="td2 title">日期</td>
             <td class="td2 title">状态</td>
         </tr>
-        <tr>
-            <td class="td2">+2000</td>
-            <td class="td2" style="width: 40%;">2016-10-10 12.00</td>
-            <td class="td2" style="color: #00a0e9;">待审核</td>
+        </thead>
+        <tbody infinite-scroll='withdrawlist.nextPage()' infinite-scroll-disabled='withdrawlist.busy' infinite-scroll-distance='1'>
+        <tr ng-repeat="item in withdrawlist.items">
+            <td class="td2">+{{item.money}}</td>
+            <td class="td2" style="width: 40%;">{{item.cdate}}</td>
+            <td class="td2" style="color: #00a0e9;">{{item.status}}</td>
         </tr>
-        <tr>
-            <td class="td2">+2000</td>
-            <td class="td2" style="width: 40%;">2016-10-10 12.00</td>
-            <td class="td2" style="color: #00a0e9;">审核通过</td>
-        </tr>
-        <tr>
-            <td class="td2">+2000</td>
-            <td class="td2" style="width: 40%;">2016-10-10 12.00</td>
-            <td class="td2" style="color: #00a0e9;">拒绝</td>
-        </tr>
+        </tbody>
     </table>
 
     <p id="is_end">已到最后一页</p>
