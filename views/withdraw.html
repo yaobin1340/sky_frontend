@@ -12,8 +12,8 @@
         </tr>
     </table>
     <div class="am-g row-one">
-        <span class="withdraw_welcome_user">您好：zhou</span>
-        <span class="">&nbsp;&nbsp;可提现余额：100元</span>
+        <span class="withdraw_welcome_user">您好：{{user_info.rel_name}}</span>
+        <span class="">&nbsp;&nbsp;&nbsp;&nbsp;可提现余额：{{user_info.integral/100}}元</span>
     </div>
     <form name="signUpForm">
         <div class="row-two">
@@ -62,7 +62,7 @@
                     <div class="am-form-group am-form-icon login_form_mobile">
                         <i class="am-icon-mobile-phone"></i>
                         <input type="text" id="mobile"  name="mobile"
-                               class="am-form-field js-pattern-mobile" value="15850293624" disabled="disabled" required style="height: 50px;border-radius: 10px;" />
+                               class="am-form-field js-pattern-mobile" value="{{user_info.mobile}}" disabled="disabled" required style="height: 50px;border-radius: 10px;" />
                     </div>
                 </div>
             </div>

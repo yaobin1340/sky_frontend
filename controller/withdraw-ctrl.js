@@ -12,4 +12,22 @@ angular
         var $mdToast = $injector.get('$mdToast');
         // var userId = $session.get('auth')._id
 
+            $http({
+                    method: 'POST',
+                    url: $config.api_uri + '/Apiuser/withdraw',
+                    data: {}
+            }).success(function (data) {
+                    if(data.success){
+                            $scope.user_info = data.user_info
+                            $scope.withdraw_info = data.withdraw_info
+                    }else{
+                            $mdToast.show(
+                                $mdToast.simple()
+                                    .content(data.error_msg)
+                                    .hideDelay(2000)
+                            );
+                    }
+
+            })
+
     });
