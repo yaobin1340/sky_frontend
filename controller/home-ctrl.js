@@ -1,6 +1,6 @@
 angular
 	.module('ohapp')
-	.controller('HomeCtrl', function HomeCtrl($scope, $injector, $window, Shops) {
+	.controller('HomeCtrl', function HomeCtrl($scope, $injector, $window, Shops,$stateParams) {
 		var $http = $injector.get('$http');
 		var $location = $injector.get('$location');
 		var $state = $injector.get('$state');
@@ -134,6 +134,33 @@ angular
 				})
 			}
 		};
+
+		function GetRequest() {
+			var url = location.search; //获取url中"?"符后的字串
+			var theRequest = new Object();
+			if (url.indexOf("?") != -1) {
+				var str = url.substr(1);
+				strs = str.split("&");
+				for(var i = 0; i < strs.length; i ++) {
+					theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+				}
+			}
+			return theRequest;
+		}
+
+		if(!GetRequest().CODE){
+			var redirect_url = 'http://fd.jiangsuwxw.com/home';
+			location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2d80ea0f220b6bf5&redirect_uri="+encodeURIComponent(redirect_url)+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect"
+		}else{
+			console.log(GetRequest().CODE)
+			var url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2d80ea0f220b6bf5&secret=7631f33bca93efa90cf68a98cc4a98e0&code="+GetRequest().CODE+"&grant_type=authorization_code"
+			$http({
+				method: 'GET',
+				url: url,
+			}).success(function (data) {
+				console.log(data)
+			})
+		}
 
 
 
