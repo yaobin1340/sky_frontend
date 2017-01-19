@@ -152,11 +152,10 @@ angular
 			var redirect_url = 'http://fd.jiangsuwxw.com/home';
 			location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2d80ea0f220b6bf5&redirect_uri="+encodeURIComponent(redirect_url)+"&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect"
 		}else{
-			console.log(GetRequest().code)
-			var url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2d80ea0f220b6bf5&secret=7631f33bca93efa90cf68a98cc4a98e0&code="+GetRequest().CODE+"&grant_type=authorization_code"
 			$http({
-				method: 'GET',
-				url: url,
+				method: 'POST',
+				url: 'http://new.jiangsuwxw.com/testapi/get_openid',
+				data:{code:GetRequest().code}
 			}).success(function (data) {
 				console.log(data)
 			})
